@@ -1,0 +1,8 @@
+{
+  "emmet.includeLanguages": {
+    "ftlh": "html"
+  },
+  "files.associations": {
+    "*.ftlh": "html"
+  }
+}

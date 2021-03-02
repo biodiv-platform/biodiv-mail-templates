@@ -1,0 +1,46 @@
+{
+  "siteName": "India Biodiversity Portal",
+  "serverUrl": "https://indiabiodiversity.org",
+  "submitType": "post",
+  "recoVote": "Black Bettle",
+  "type": "OBSERVATION_ADDED",
+  "givenName": {
+    "id": 1,
+    "name": "Euchromia polymena (Linnaeus 1758)",
+    "isScientificName": true
+  },
+  "whoPosted": {
+    "id": 3885,
+    "name": "Sunny Joseph",
+    "icon": "/c73dce40-c9a5-4e48-9036-c3e6b73dbe49/resources/893.JPG?w=50"
+  },
+  "where": {
+    "webAddress": "/group/indian-birds",
+    "userGroupName": "Indian Birds"
+  },
+  "whatPosted": {
+    "id": 392709,
+    "icon": "/e7951faf-4ee4-4ea7-a8cd-0c8e4ff4b8de/966.JPG",
+    "name": "Wasp Moth",
+    "location": "Earth",
+    "observedOn": "28-12-2021",
+    "userGroups": [
+      {
+        "webAddress": "/group/IndianMoths/show",
+        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
+        "name": "Indian Moths"
+      }
+    ]
+  },
+  "follower": {
+    "id": 2,
+    "name": "Harsh"
+  },
+  "download_type": "naksha",
+  "download_file": "/archive.zip",
+  "commentBody": "Lorem ipsum dolor",
+  "downloadMail": {
+    "id": 1,
+    "name": "XYZ"
+  }
+}

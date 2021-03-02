@@ -1,0 +1,17 @@
+{
+  "name": "Harsh",
+  "siteName": "India Biodiversity Portal",
+  "serverUrl": "https://foo.bar",
+  "inviter": {
+    "id": 1,
+    "name": "Thomas"
+  },
+  "encrypted_key": "token",
+  "role": "Founder",
+  "_role": "Moderator",
+  "group": {
+    "webAddress": "https://jumping-frogs.foo.bar",
+    "_webAddress": "/group/jumping-frogs",
+    "name": "The Jumping Frogs"
+  }
+}

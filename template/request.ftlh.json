@@ -1,0 +1,14 @@
+{
+  "name": "Administrator",
+  "siteName": "India Biodiversity Portal",
+  "serverUrl": "https://indiabiodiversity.org",
+  "group": {
+    "webAddress": "/group/IndianMoths/show",
+    "name": "Indian Moths"
+  },
+  "encrypted_key": "xyz",
+  "requestor": {
+    "id": 815309,
+    "name": "Harsh"
+  }
+}
