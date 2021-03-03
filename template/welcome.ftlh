@@ -18,108 +18,120 @@
 
 <div style="padding: 30px 40px">
   <p>Hi ${username},</p>
-  <p>${welcomeEmailIntro}</p>
 
-  <br />
-  <br />
+  <p>
+    You are now part of an exciting initiative designed to facilitate
+    participation and enable open access for all citizens in contributing
+    information on biodiversity for the benefit of science and society. All data
+    on the portal is free and served under Creative Commons license.
+  </p>
 
-  <div style="display: flex">
-    <a
-      style="text-decoration: none; font-weight: normal"
-      href="${serverUrl+'/observation/list'}"
-      ><img
-        src="${serverUrl+'/biodiv/assets/all/observations_cr.png'}"
-        style="
-          width: 120px;
-          height: 120px;
-          border-radius: 0.5rem;
-          margin-right: 24px;
-        "
-        alt="Observations"
-    /></a>
-    <div>${welcomeEmailObservation}</div>
+  <p>How to get Started:</p>
+
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/user.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="User"
+    />
+    <div>
+      <a href="${serverUrl+userProfileUrl}">Complete your user profile</a>
+      Upload a photo, write a few words on your interests to help other users
+      know more about you. View other profiles, and compare your
+      <a href="${serverUrl+'/user/leaderboard/'}">leaderboard ranking</a>
+    </div>
   </div>
 
-  <br />
-  <br />
-
-  <div style="display: flex">
-    <a
-      style="text-decoration: none; font-weight: normal"
-      href="${serverUrl+'/map'}"
-      ><img
-        src="${serverUrl+'/biodiv/assets/all/maps_cr.png'}"
-        style="
-          width: 120px;
-          height: 120px;
-          border-radius: 0.5rem;
-          margin-right: 24px;
-        "
-        alt="Maps"
-    /></a>
-    <div>${welcomeEmailMap}</div>
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/observations.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="Observations"
+    />
+    <div>
+      <a href="${serverUrl+'/observation/list'}">
+        Participate in citizen science
+      </a>
+      Upload, identify, browse or download observations of flora and fauna that
+      you observe to help curate occurrence data on species around you.
+    </div>
   </div>
 
-  <br />
-  <br />
-
-  <div style="display: flex">
-    <a
-      style="text-decoration: none; font-weight: normal"
-      href="${serverUrl+'/document/list'}"
-      ><img
-        src="${serverUrl+'/biodiv/assets/all/documents_cr.png'}"
-        style="
-          width: 120px;
-          height: 120px;
-          border-radius: 0.5rem;
-          margin-right: 24px;
-        "
-        alt="Documents"
-    /></a>
-    <div>${welcomeEmailDocuments}</div>
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/species.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="Species"
+    />
+    <div>
+      <a href="${serverUrl+'/species/list'}"> Learn about species </a>
+      Browse through curated species page information, to know more about them.
+      If you are a species expert, you may
+      <a href="${serverUrl+'/species/contribute'}">request</a> to be a species
+      page contributor.
+    </div>
   </div>
 
-  <br />
-  <br />
-
-  <div style="display: flex">
-    <a
-      style="text-decoration: none; font-weight: normal"
-      href="${serverUrl+'/species/list'}"
-      ><img
-        src="${serverUrl+'/biodiv/assets/all/species_cr.png'}"
-        style="
-          width: 120px;
-          height: 120px;
-          border-radius: 0.5rem;
-          margin-right: 24px;
-        "
-        alt="Species"
-    /></a>
-
-    <div>${welcomeEmailSpecies}</div>
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/naksha.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="Naksha"
+    />
+    <div>
+      <a href="${serverUrl+'/maps'}"> Visualize or download maps </a>
+      Interact with spatial data on biodiversity through our map layers. The
+      layers can be overlaid and queried or downloaded to be used offline.
+    </div>
   </div>
 
-  <br />
-  <br />
-
-  <div style="display: flex">
-    <a
-      style="text-decoration: none; font-weight: normal"
-      href="${serverUrl+'/group/list'}"
-      ><img
-        src="${serverUrl+'/biodiv/assets/all/groups_cr.png'}"
-        style="
-          width: 120px;
-          height: 120px;
-          border-radius: 0.5rem;
-          margin-right: 24px;
-        "
-        alt="Groups"
-    /></a>
-    <div>${welcomeEmailGroups}</div>
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/documents.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="Observations"
+    />
+    <div>
+      <a href="${serverUrl+'/document/list'}"> Browse or upload documents </a>
+      Access scholarly publications and grey literature on an array of topics
+      relevant to biodiversity, contributed by users.
+    </div>
   </div>
 
-  <br />
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/community.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="Observations"
+    />
+    <div>
+      <a href="${serverUrl+'/usergroup/list'}"> Join user communities </a>
+      Groups are microsites on various, taxonomic, spatial or organizational
+      themes that you may join to interact with and help build information on.
+    </div>
+  </div>
+
+  <p>
+    We're excited to have you as a member. Thank you for joining and we hope you
+    enjoy using the portal.
+  </p>
+
+  <p>
+    Regards,<br />
+    The ${siteName} Team
+  </p>
+
+  <hr
+    style="
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin: 32px 0;
+      width: 100%;
+    "
+  />
+
+  <p style="color: #666; font-size: 14px; line-height: 24px">
+    Please add <i>${mailDefaultFrom}</i> to your address book to ensure you
+    continue to receive emails from us in your inbox.
+  </p>
 </div>

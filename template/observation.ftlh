@@ -320,7 +320,7 @@
   "
 />
 
-<p style="color: #666666; font-size: 12px; line-height: 24px">
+<p style="color: #666; font-size: 12px; line-height: 24px">
   If you don't want to receive notifications from our portal, please unsubscribe by logging into
   <a href='${serverUrl}/user/show/<#if type=="DOWNLOAD_MAIL">${downloadMail.id?c}<#else>${follower.id?c}</#if>'>your profile</a>
 </p>
