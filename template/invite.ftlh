@@ -1,16 +1,14 @@
 <div style="padding: 40px 60px">
 
-<h1
-  style="
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0;
-    line-height: 1;
-    margin-bottom: 32px;
-  "
->
-  Invitation
-</h1>
+<div style="margin: 0 0 20px -10px">
+  <a href="${serverUrl}">
+    <img
+      src="${serverUrl+'/files-api/api/get/raw/logo/IBP.png'}"
+      alt="${siteName}"
+      style="width: 180px"
+    />
+  </a>
+</div>
 
 <p>Hello ${name},</p>
 
@@ -58,7 +56,7 @@
 
 <p>
   Regards,<br />
-  The ${siteName} Team.
+  The ${siteName} Team
 </p>
 
 </div>

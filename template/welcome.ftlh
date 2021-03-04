@@ -1,4 +1,4 @@
-<div style="margin: 30px 36px">
+<div style="padding: 40px 60px; margin: 0 0 0 -10px">
   <a href="${serverUrl}">
     <img
       src="${serverUrl+'/files-api/api/get/raw/logo/IBP.png'}"
@@ -8,6 +8,7 @@
   </a>
 </div>
 
+
 <a href="${serverUrl+'/observation/list'}">
   <img
     src="${serverUrl+'/biodiv/assets/all/picturebanner.png'}"
@@ -16,7 +17,7 @@
   />
 </a>
 
-<div style="padding: 30px 40px">
+<div style="padding: 40px 60px">
   <p>Hi ${username},</p>
 
   <p>

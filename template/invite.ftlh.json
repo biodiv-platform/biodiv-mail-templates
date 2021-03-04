@@ -1,7 +1,7 @@
 {
   "name": "Harsh",
   "siteName": "India Biodiversity Portal",
-  "serverUrl": "https://foo.bar",
+  "serverUrl": "https://indiabiodiversity.org",
   "inviter": {
     "id": 1,
     "name": "Thomas"

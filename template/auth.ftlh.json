@@ -1,5 +1,6 @@
 {
   "siteName": "India Biodiversity Portal",
+  "serverUrl": "https://indiabiodiversity.org",
   "username": "Harsh",
   "otp": "123456",
   "type": "RESET_PASSWORD"

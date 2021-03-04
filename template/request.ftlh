@@ -1,5 +1,15 @@
 <div style="padding: 40px 60px">
 
+<div style="margin: 0 0 20px -10px">
+  <a href="${serverUrl}">
+    <img
+      src="${serverUrl+'/files-api/api/get/raw/logo/IBP.png'}"
+      alt="${siteName}"
+      style="width: 180px"
+    />
+  </a>
+</div>
+
 <p>Hi ${name},</p>
 
 <p>
