@@ -3,9 +3,8 @@
 <div style="margin: 0 0 20px -10px">
   <a href="${serverUrl}">
     <img
-      src="${serverUrl+'/files-api/api/get/raw/logo/IBP.png'}"
+      src="${serverUrl+'/files-api/api/get/raw/logo/logo-m.png'}"
       alt="${siteName}"
-      style="width: 180px"
     />
   </a>
 </div>
