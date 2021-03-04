@@ -14,7 +14,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> added a comment to the page listed below.
   </p>
@@ -23,7 +23,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> added a fact.
   </p>
@@ -32,7 +32,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> updated a fact.
   </p>
@@ -41,7 +41,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> edited tags in the observation listed below
   </p>
@@ -50,7 +50,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> edited a custom field in the observation listed below
   </p>
@@ -59,7 +59,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> added the following observation:
   </p>
@@ -68,7 +68,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> deleted the following observation:
   </p>
@@ -77,7 +77,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> updated the following observation:
   </p>
@@ -86,7 +86,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> validated and locked species name 
     <#if givenName.isScientificName==true>
@@ -104,7 +104,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> unlocked species name
     <#if givenName.isScientificName==true>
@@ -122,7 +122,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> featured observation in: <a href="${serverUrl}/group/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
   </p>
@@ -131,7 +131,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> featured observation in: ${siteName}
   </p>
@@ -140,7 +140,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> flagged your observation
   </p>
@@ -149,7 +149,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> rated a resource within the following observation
   </p>
@@ -158,7 +158,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> agreed on species name
   </p>
@@ -167,7 +167,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> removed species name
   </p>
@@ -176,7 +176,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a>
     <#if submitType=="post">posted<#else>removed </#if> observation
@@ -188,7 +188,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> suggested species name <span>${recoVote}</span>
   </p>
@@ -197,7 +197,7 @@
   <p>Hi ${follower.name},</p>
   <p>
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
-      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/raw/users${whoPosted.icon}">
+      <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
     </a> has tagged you in a comment on the page listed below.
   </p>
@@ -269,7 +269,7 @@
         <td rowspan="3">
           <a href="${serverUrl}/observation/show/${whatPosted.id?c}">
             <img
-              src="${serverUrl}/files-api/api/get/raw/observations${whatPosted.icon}"
+              src="${serverUrl}/files-api/api/get/icon/100/100/observations${whatPosted.icon}"
               style="height: 100px; width: auto; border-radius: 0.5rem; margin-right: 0.5rem;"
             />
           </a>
