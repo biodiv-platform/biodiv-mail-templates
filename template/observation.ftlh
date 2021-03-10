@@ -291,29 +291,54 @@
   </table>
 </div>
 
-<a>The above observation is a member of the following groups: </a>
-<ul style="list-style-type: none; padding: 0;">
-  <#list whatPosted.userGroups as memberOf>
-    <#if (memberOf.webAddress)??>
-      <li>
-        <a href="
-          <#if memberOf.webAddress?starts_with("/group")>
-          ${serverUrl}${memberOf.webAddress}/show
-          <#else>
-            ${memberOf.webAddress}
-          </#if>
-          "
-          style="text-decoration: none;"
-          >
-            <#if (memberOf.icon)??>
-            <img src="${serverUrl}/biodiv/userGroups/${memberOf.icon}" style="width:40px;height:auto;vertical-align:middle; border-radius: 0.25rem;">
-            </#if>
-            ${memberOf.name}
-        </a>
-      </li>
-    </#if>
+<div style="margin-bottom: 0.5rem;">The above observation is a member of the following groups: </div>
+
+<table style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0">
+  <#list whatPosted.userGroups?chunk(2) as row>
+    <tr>
+      <#list row as memberOf>
+        <#if (memberOf.webAddress)??>
+          <td>
+              <a
+                style="
+                  display: block;
+                  align-items: center;
+                  border: 2px solid #e2e8f0;
+                  border-radius: 0.375rem;
+                  text-decoration: none;
+                  color: inherit;
+                  height: 3rem;
+                  line-height: 3rem;
+                  text-overflow:ellipsis;
+                  overflow:hidden;
+                  white-space:nowrap;
+                  margin-right: 0.75rem;
+                  margin-bottom: 0.75rem;
+                "
+                href="
+                <#if memberOf.webAddress?starts_with("/group")>
+                ${serverUrl}${memberOf.webAddress}/show
+                <#else>
+                  ${memberOf.webAddress}
+                </#if>
+                " >
+                <#if (memberOf.icon)??>
+                  <img src="${serverUrl}/biodiv/userGroups/${memberOf.icon}" style="
+                    float: left;
+                    height: 35px;
+                    width: 35px;
+                    object-fit: contain;
+                    padding: 0.4rem;
+                  "/>
+                </#if>
+                ${memberOf.name}
+            </a>
+          </td>
+        </#if>
+      </#list>
+    </tr>
   </#list>
-</ul>
+</table>
 </#if>
 
 <p>
