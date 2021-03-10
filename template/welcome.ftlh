@@ -20,7 +20,7 @@
   <p>Hi ${username},</p>
 
   <p>
-    You are now part of an exciting initiative designed to facilitate
+    Welcome to the ${siteName}, You are now part of an exciting initiative designed to facilitate
     participation and enable open access for all citizens in contributing
     information on biodiversity for the benefit of science and society. All data
     on the portal is free and served under Creative Commons license.
