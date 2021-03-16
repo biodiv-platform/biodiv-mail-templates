@@ -345,7 +345,7 @@
   <p>
     For more information, please visit the page <a href="${serverUrl}/observation/show/${whatPosted.id}">here</a>
   </p>
-</if>
+</#if>
 
 <hr
   style="
