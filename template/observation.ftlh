@@ -1,6 +1,6 @@
 <div style="padding: 40px 60px">
 
-<div style="margin: 0 0 20px -10px">
+<div style="margin: 0 0 20px 0">
   <a href="${serverUrl}">
     <img
       src="${serverUrl+'/files-api/api/get/raw/logo/logo-m.png'}"
@@ -341,9 +341,11 @@
 </table>
 </#if>
 
-<p>
-  For more information, please visit the page <a href="${serverUrl}/observation/show/${whatPosted.id?c}">here</a>
-</p>
+<#if (whatPosted.id)??>
+  <p>
+    For more information, please visit the page <a href="${serverUrl}/observation/show/${whatPosted.id}">here</a>
+  </p>
+</if>
 
 <hr
   style="

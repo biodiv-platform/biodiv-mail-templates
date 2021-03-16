@@ -1,6 +1,6 @@
 <div style="padding: 40px 60px">
 
-<div style="margin: 0 0 20px -10px">
+<div style="margin: 0 0 20px 0">
   <a href="${serverUrl}">
     <img
       src="${serverUrl+'/files-api/api/get/raw/logo/logo-m.png'}"
