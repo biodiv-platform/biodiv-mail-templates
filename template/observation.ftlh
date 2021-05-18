@@ -343,7 +343,7 @@
 
 <#if (whatPosted.id)??>
   <p>
-    For more information, please visit the page <a href="${serverUrl}/observation/show/${whatPosted.id}">here</a>
+    For more information, please visit the page <a href="${serverUrl}/observation/show/${whatPosted.id?c}">here</a>
   </p>
 </#if>
 
