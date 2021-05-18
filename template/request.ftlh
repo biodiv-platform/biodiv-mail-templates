@@ -25,13 +25,13 @@
 </p>
 
 <a
-href="
+href='
   <#if group.webAddress?starts_with("/group")>
-    ${serverUrl}${group.webAddress}/continue/verify-request?token=${encrypted_key}
+    ${serverUrl}${group.webAddress}/continue/verify-request?token=${encrypted_key}&type=group-member
   <#else>
-    ${group.webAddress}/continue/verify-request?token=${encrypted_key}
+    ${group.webAddress}/continue/verify-request?token=${encrypted_key}&type=group-member
   </#if>
-"
+  '
 style="
   background-color: #38A169;
   border-radius: 5px;

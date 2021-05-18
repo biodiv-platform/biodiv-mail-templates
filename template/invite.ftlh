@@ -34,9 +34,9 @@
   <a
     href="
     <#if group.webAddress?starts_with("/group")>
-      ${serverUrl}${group.webAddress}/continue/verify-invitation?token=${encrypted_key}
+      ${serverUrl}${group.webAddress}/continue/verify-invitation?token=${encrypted_key}&type=verify-invitation
     <#else>
-      ${group.webAddress}/continue/verify-invitation?token=${encrypted_key}
+      ${group.webAddress}/continue/verify-invitation?token=${encrypted_key}&type=verify-invitation
     </#if>
     "
     style="

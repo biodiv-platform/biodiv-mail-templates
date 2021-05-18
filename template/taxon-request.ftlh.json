@@ -1,0 +1,11 @@
+{
+  "name": "Administrator",
+  "siteName": "India Biodiversity Portal",
+  "serverUrl": "https://indiabiodiversity.org",
+  "encrypted_key": "xyz",
+  "requesteeId": 815309,
+  "requestorName": "Harsh",
+  "role": "OBSERVATIONCURATOR",
+  "taxonName": "saxicola maurus",
+  "taxonId": 1233
+}
