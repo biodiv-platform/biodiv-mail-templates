@@ -11,7 +11,7 @@
   <p>Hi,</p>
 
   <p>
-    <a href="${serverUrl}/user/show/${requesteeId?c}">${requesteeName}</a>
+    <a href="${serverUrl}/user/show/${requesteeId?c}">${name}</a>
     is requesting for <b>${role?lower_case}</b> role on
     <a href="${serverUrl}/namelist/index?taxon=${taxonId?c}">
       <i>${taxonName}</i>
