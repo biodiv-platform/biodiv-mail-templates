@@ -11,7 +11,7 @@
   <p>Hi ${name},</p>
 
   <p>
-    Your request as a <b>${role?lower_case}</b> role on
+    You have been added as <b>${role?lower_case}</b> on the taxon: 
     <a href="${serverUrl}/namelist/index?taxon=${taxonId?c}">
       <i>${taxonName}</i>
     </a>
