@@ -274,7 +274,7 @@
           </a>
         </td>
         <td>
-          <b>Name:</b> ${whatPosted.name?html}
+          <b>Name:</b> ${whatPosted.name}
         </td>
       </tr>
       <tr>
