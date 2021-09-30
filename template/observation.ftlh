@@ -244,12 +244,12 @@
     <p>Given name is:
       <#if givenName.isScientificName==true>
         <#if givenName.id !=0>
-          <a href="${serverUrl}/species/show/${givenName.id?c}"> <i> ${givenName.name?html} </i></a>
+          <a href="${serverUrl}/species/show/${givenName.id?c}"> ${givenName.name}</a>
         <#else>
-          <i> ${givenName.name?html} </i>
+          <i> ${givenName.name} </i>
         </#if>
       <#else>
-        ${givenName.name?html}
+        ${givenName.name}
       </#if>
     </p>
   </#if>
