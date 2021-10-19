@@ -15,7 +15,6 @@
     <a href="${serverUrl}/namelist/index?taxon=${taxonId?c}">
       <i>${taxonName}</i>
     </a>
-    is approved.
   </p>
 
   <p>
