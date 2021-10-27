@@ -284,7 +284,7 @@
       </tr>
       <tr>
         <td>
-          <b>Observed On:</b> ${whatPosted.observedOn}
+          <b>Observed On:</b> ${whatPosted.observedOn} UTC
         </td>
       </tr>
     </tbody>

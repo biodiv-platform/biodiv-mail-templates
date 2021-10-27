@@ -12,12 +12,12 @@
 
   <p>
     The image(s) that you have uploaded to your <nobr>"Draft Media"</nobr> area
-    on the Portal on ${fromDate} are due to expire tomorrow.
+    on the Portal on ${fromDate} UTC are due to expire tomorrow.
   </p>
 
   <p>
     If you do not utilize them these images will be cleared from your upload
-    area on ${toDate}.
+    area on ${toDate} UTC.
   </p>
 
   <p>
