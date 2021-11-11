@@ -83,6 +83,19 @@
     </div>
   </div>
 
+  <div style="display: flex; margin-bottom: 1.6rem">
+    <img
+      src="${serverUrl+'/biodiv/newsletters/welcome/landscapes.png'}"
+      style="width: 100px; height: 100px; margin-right: 24px"
+      alt="Protected Areas"
+    />
+    <div>
+      <a href="${serverUrl+'/landscape/list'}"> Browse information on Protected Areas </a>
+      with detailed information on spatial boundaries, species lists and relevant
+      literature on it.
+    </div>
+  </div>
+
   <p>
     We're excited to have you as a member. Thank you for joining and we hope you
     enjoy using the portal.
