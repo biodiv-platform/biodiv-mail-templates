@@ -44,20 +44,6 @@
 
   <div style="display: flex; margin-bottom: 1.6rem">
     <img
-      src="${serverUrl+'/biodiv/newsletters/welcome/landscapes.png'}"
-      style="width: 100px; height: 100px; margin-right: 24px"
-      alt="Landscapes"
-    />
-    <div>
-      <a href="${serverUrl+'/landscape/list'}"> Learn about protected areas </a>
-      Browse through curated content on the protected areas of Madagascar, with
-      downloadable boundary maps, bibliography and dynamically updating species
-      lists on each protected area.
-    </div>
-  </div>
-
-  <div style="display: flex; margin-bottom: 1.6rem">
-    <img
       src="${serverUrl+'/biodiv/newsletters/welcome/observations.png'}"
       style="width: 100px; height: 100px; margin-right: 24px"
       alt="Observations"
