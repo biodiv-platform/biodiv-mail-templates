@@ -7,7 +7,7 @@
   </a>
 </div>
 
-<a href="${serverUrl+'/observation/list'}">
+<a href="${serverUrl+'/data/list'}">
   <img
     src="${serverUrl+'/biodiv/assets/all/picturebanner.jpg'}"
     alt="Photo of Community Conserved Area"
