@@ -357,7 +357,7 @@
 />
 
 <div style="color: #666; font-size: 14px; line-height: 24px">
-  Don't want to receive these emails? <a href='${serverUrl}/user/unsubscribe/${unregisterEmailNotification}'>unsubscribe</a>
+  Don't want to receive these emails? <a href='${serverUrl}/user/unsubscribe?key=${unregisterEmailNotification}'>unsubscribe</a>
 </div>
 
 </div>
