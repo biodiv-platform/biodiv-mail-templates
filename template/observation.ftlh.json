@@ -42,5 +42,6 @@
   "downloadMail": {
     "id": 1,
     "name": "XYZ"
-  }
+  },
+  "unregisterEmailNotification": "xyz"
 }

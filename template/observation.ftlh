@@ -356,9 +356,8 @@
   "
 />
 
-<p style="color: #666; font-size: 12px; line-height: 24px">
-  If you don't want to receive notifications from our portal, please unsubscribe by logging into
-  <a href='${serverUrl}/user/show/<#if type=="DOWNLOAD_MAIL">${downloadMail.id?c}<#else>${follower.id?c}</#if>'>your profile</a>
-</p>
+<div style="color: #666; font-size: 14px; line-height: 24px">
+  Don't want to receive these emails? <a href='${unregisterEmailNotification}'>unsubscribe</a>
+</div>
 
 </div>
