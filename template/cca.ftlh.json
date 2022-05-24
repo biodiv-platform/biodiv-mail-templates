@@ -1,0 +1,48 @@
+{
+  "siteName": "Community Conserved Areas",
+  "serverUrl": "https://staging.communityconservedareas.org",
+  "submitType": "post",
+  "type": "CCA_TEMPLATE_DELETED",
+
+  "user": {
+    "id": 3885,
+    "name": "Administrator",
+    "icon": "/c73dce40-c9a5-4e48-9036-c3e6b73dbe49/resources/893.JPG?w=50"
+  },
+
+  "data" : {
+    "id": 392709,
+    "url": "data_url",
+    "label" : "location summary field",
+    "old" : "true",
+    "new" : "false",
+    "time" : "3 hour ago"
+  },
+
+  "template" : {
+    "short_name" : "Long",
+    "url" : "template_url",
+    "time" : "3 hour ago",
+    "label" : "template label",
+    "value": "template value"
+  },
+
+  "activity": {
+    "title" : "Title value",
+    "ecosystem" : "Ecosystem value",
+    "area": "Area value",
+    "legalStatus": "Legal status value",
+    "nameOfCCA": "Name of CCA value",
+    "image" : "434eacd3ec9748c19ef25a92ef45320b.JPG?h=64"
+  },
+  "follower": {
+    "id": 2,
+    "name": "Harsh"
+  },
+
+  "downloadMail": {
+    "id": 1,
+    "name": "XYZ"
+  },
+  "unregisterEmailNotification": "xyz"
+}
