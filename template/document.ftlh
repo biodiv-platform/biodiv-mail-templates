@@ -89,7 +89,9 @@
       </table>
     </div>
     
-    <div style="margin-bottom: 0.5rem;">The above document is a member of the following groups: </div>
+    <#if whatPosted.userGroups?size != 0>
+     <div style="margin-bottom: 0.5rem;">The above document is a member of the following groups: </div>
+    </#if>
     <table style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0">
       <#list whatPosted.userGroups?chunk(2) as row>
         <tr>
