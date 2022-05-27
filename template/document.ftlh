@@ -63,7 +63,7 @@
       </p>
     </#if>
 
-    <#if type=="COMMENT_POST" || type=="DOCUMENT_COMMENT_POST" ||  type=="DOCUMENT_FLAGGED">
+    <#if type=="COMMENT_POST" || type=="DOCUMENT_COMMENT_POST" >
     <div style="margin-bottom: 1.4rem; padding: 1rem; border-radius: 0.5rem; background: #EDF2F7">${commentBody}</div>
     </#if>
 
@@ -83,11 +83,6 @@
             </td>
             <td>
               <b>Name:</b> ${whatPosted.name}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Type:</b> ${whatPosted.type}
             </td>
           </tr>
         </tbody>
