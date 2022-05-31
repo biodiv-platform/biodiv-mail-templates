@@ -2,10 +2,10 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://staging.communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_TEMPLATE_DELETED",
+  "type": "CCA_DATA_UPDATED",
 
   "user": {
-    "id": 3885,
+    "id": 2,
     "name": "Administrator",
     "icon": "/c73dce40-c9a5-4e48-9036-c3e6b73dbe49/resources/893.JPG?w=50"
   },
@@ -35,14 +35,30 @@
     "nameOfCCA": "Name of CCA value",
     "image" : "434eacd3ec9748c19ef25a92ef45320b.JPG?h=64"
   },
+
   "follower": {
     "id": 2,
-    "name": "Harsh"
+    "name": "Harsh",
+    "users": [
+      {
+        "id" : 1,
+        "name" : "gks"
+      },
+      {
+        "id" : 2,
+        "name": "vishnu"
+      }
+    ]
+  },
+
+  "added" : {
+
   },
 
   "downloadMail": {
     "id": 1,
     "name": "XYZ"
   },
-  "unregisterEmailNotification": "xyz"
+  "unregisterEmailNotification": "xyz",
+  "test" : "2"
 }
