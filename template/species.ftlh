@@ -33,7 +33,7 @@
         </a> deleted the following Species:
       </p>
     
-    <#elseif type=="SPECIES_UPDATED" || type=="SPECIES_COMMENT_POST" || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT"||type=="SPECIES_NAME"||type=="SPECIES_RESOURCE">
+    <#elseif type=="SPECIES_UPDATED" || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT"||type=="SPECIES_NAME"||type=="SPECIES_RESOURCE">
       <p>Hi ${follower.name},</p>
       <p>
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
@@ -64,7 +64,7 @@
       </p>
     </#if>
 
-    <#if type=="COMMENT_POST" || type=="SPECIES_COMMENT_POST" || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT"||type=="SPECIES_NAME"||type=="SPECIES_RESOURCE" || type=="DOCUMENT_COMMENT_POST" >
+    <#if type=="COMMENT_POST" || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT"||type=="SPECIES_NAME"||type=="SPECIES_RESOURCE" || type=="DOCUMENT_COMMENT_POST" >
     <div style="margin-bottom: 1.4rem; padding: 1rem; border-radius: 0.5rem; background: #EDF2F7">${commentBody}</div>
     </#if>
 
@@ -77,17 +77,23 @@
             <td rowspan="3" style="padding-right: 15px;">
               <a href="${serverUrl}/document/show/${whatPosted.id?c}">
                 
-                <#if whatPosted.group?has_content>
+                <#if whatPosted.icon?has_content>
                 <img
-                src="${serverUrl}/biodiv/species/${whatPosted.group}.png}"
-                style="width: 80px; height: 80px; margin-right: 24px"
-                alt="Documents"
+                src="{serverUrl}/files-api/api/get/icon/100/100/img${whatPosted.icon}"
+                style="width: 100px; height: 100px; margin-right: 24px"
+                alt="Species"
+              />
+                <#elseif  whatPosted.group?has_content>
+                <img
+                src="${serverUrl}/biodiv/species/${whatPosted.group}.png"
+                style="width: 100px; height: 100px; margin-right: 24px"
+                alt="Species"
               />
                 <#else>
                 <img
-                src="${serverUrl}/biodiv/species/${Unknown}.png}"
-                style="width: 80px; height: 80px; margin-right: 24px"
-                alt="Documents"
+                src="${serverUrl}/biodiv/species/Unknown.png"
+                style="width: 100px; height: 100px; margin-right: 24px"
+                alt="Species"
               />
                 </#if>
               
