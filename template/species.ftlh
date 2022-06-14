@@ -33,7 +33,7 @@
         </a> deleted the following Species:
       </p>
     
-    <#elseif type=="SPECIES_UPDATED" || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT"||type=="SPECIES_NAME"||type=="SPECIES_RESOURCE">
+    <#elseif type=="SPECIES_UPDATED" ||type=="SPECIES_FACT" || type == "SPECIES_SYNONYMS" || type == "SPECIES_COMMON_NAME" || type == "SPECIES_FIELD_UPDATED"||type=="SPECIES_RESOURCE" || type=="SPECIES_COMMENT_POST">
       <p>Hi ${follower.name},</p>
       <p>
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
@@ -64,7 +64,7 @@
       </p>
     </#if>
 
-    <#if type=="COMMENT_POST" || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT"||type=="SPECIES_NAME"||type=="SPECIES_RESOURCE" || type=="DOCUMENT_COMMENT_POST" >
+    <#if type=="COMMENT_POST"  || type=="SPECIES_COMMENT_POST"||type=="SPECIES_FACT" || type == "SPECIES_SYNONYMS" || type == "SPECIES_COMMON_NAME" || type == "SPECIES_FIELD_UPDATED"||type=="SPECIES_RESOURCE" || type=="DOCUMENT_COMMENT_POST" >
     <div style="margin-bottom: 1.4rem; padding: 1rem; border-radius: 0.5rem; background: #EDF2F7">${commentBody}</div>
     </#if>
 

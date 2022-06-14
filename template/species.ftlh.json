@@ -1,0 +1,33 @@
+{
+  "siteName": "India Biodiversity Portal",
+  "serverUrl": "https://indiabiodiversity.org",
+  "submitType": "post",
+  "type": "DOCUMENT_ADDED",
+  "whoPosted": {
+    "id": 3885,
+    "name": "Sunny Joseph",
+    "icon": "/c73dce40-c9a5-4e48-9036-c3e6b73dbe49/resources/893.JPG?w=50"
+  },
+  "where": {
+    "webAddress": "/group/indian-birds",
+    "userGroupName": "Indian Birds"
+  },
+  "whatPosted": {
+    "id": 392709,
+    "name": "Ecological Effects of the Invasive Giant Madagascar Day Gecko on Endemic Mauritian Geckos: Applications of Binomial-Mixture and Species Distribution Models",
+    "type": "Article",
+    "userGroups": [
+      {
+        "webAddress": "/group/IndianMoths/show",
+        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
+        "name": "Indian Moths"
+      }
+    ]
+  },
+  "follower": {
+    "id": 2,
+    "name": "Harsh"
+  },
+  "commentBody": "Lorem ipsum dolor",
+  "unregisterEmailNotification": "xyz"
+}
