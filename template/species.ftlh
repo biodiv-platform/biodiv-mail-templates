@@ -79,13 +79,13 @@
                 
                 <#if whatPosted.icon?has_content>
                 <img
-                src="{serverUrl}/files-api/api/get/icon/100/100/img${whatPosted.icon}"
+                src="{serverUrl}/files-api/api/get/icon/100/100/img${whatPosted.icon.?c}"
                 style="width: 100px; height: 100px; margin-right: 24px"
                 alt="Species"
               />
                 <#elseif  whatPosted.group?has_content>
                 <img
-                src="${serverUrl}/biodiv/species/${whatPosted.group}.png"
+                src="${serverUrl}/biodiv/species/${whatPosted.group.?c}.png"
                 style="width: 100px; height: 100px; margin-right: 24px"
                 alt="Species"
               />
