@@ -75,7 +75,7 @@
         <tbody>
           <tr>
             <td rowspan="3" style="padding-right: 15px;">
-              <a href="${serverUrl}/document/show/${whatPosted.id?c}">
+              <a href="${serverUrl}/species/show/${whatPosted.id?c}">
                 
                 <#if whatPosted.icon?has_content>
                 <img
@@ -160,7 +160,7 @@
     
     <#if (whatPosted.id)??>
       <p>
-        For more information, please visit the page <a href="${serverUrl}/document/show/${whatPosted.id?c}">here</a>
+        For more information, please visit the page <a href="${serverUrl}/species/show/${whatPosted.id?c}">here</a>
       </p>
     </#if>
     
