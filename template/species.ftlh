@@ -85,7 +85,7 @@
               />
                 <#elseif  whatPosted.group?has_content>
                 <img
-                src="${serverUrl}/biodiv/species/${whatPosted.group}.png"
+                src="${serverUrl}/biodiv/sgroup/${whatPosted.group}_th.jpg"
                 style="width: 100px; height: 100px; margin-right: 24px"
                 alt="Species"
               />
