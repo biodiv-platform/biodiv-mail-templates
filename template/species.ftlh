@@ -21,7 +21,7 @@
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> added the following Species:
+        </a> added the following species:
       </p>
     
     <#elseif type=="SPECIES_DELETED">
@@ -30,7 +30,7 @@
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> deleted the following Species:
+        </a> deleted the following species:
       </p>
     
     <#elseif type=="SPECIES_UPDATED" ||type=="SPECIES_FACT" || type == "SPECIES_SYNONYMS" || type == "SPECIES_COMMON_NAME"||type=="SPECIES_FIELD_DELETED"||type="SPECIES_FIELD_ADDED" || type == "SPECIES_FIELD_UPDATED"||type=="SPECIES_RESOURCE" || type=="SPECIES_COMMENT_POST">
@@ -39,7 +39,7 @@
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> updated the following Species:
+        </a> updated the following species:
       </p>
    
       
@@ -58,7 +58,7 @@
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
         </a>
-        <#if submitType=="post">posted<#else>removed </#if> Species
+        <#if submitType=="post">posted<#else>removed </#if> species
         <#if submitType=="post">to<#else>from </#if> group
         <a href="${serverUrl}/group/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
       </p>
@@ -108,7 +108,7 @@
     </div>
     
     <#if whatPosted.userGroups?size != 0>
-     <div style="margin-bottom: 0.5rem;">The above Species is a member of the following groups: </div>
+     <div style="margin-bottom: 0.5rem;">The above species is a member of the following groups: </div>
     </#if>
     <table style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0">
       <#list whatPosted.userGroups?chunk(2) as row>
