@@ -1,6 +1,6 @@
 {
   "siteName": "Community Conserved Areas",
-  "serverUrl": "https://staging.communityconservedareas.org",
+  "serverUrl": "https://communityconservedareas.org",
   "submitType": "post",
   "type": "CCA_DATA_UPDATED",
 
@@ -21,7 +21,7 @@
 
   "template" : {
     "short_name" : "Long",
-    "url" : "template_url",
+    "url" : "template/list",
     "time" : "3 hour ago",
     "label" : "template label",
     "value": "template value"

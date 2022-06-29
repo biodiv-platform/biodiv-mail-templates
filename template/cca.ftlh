@@ -61,53 +61,69 @@
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <img style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${user.icon}">
         <#if user.id==follower.id>You<#else>${user.name}</#if>
-      </a> 
-      <#if type=="CCA_DATA_FOLLOW">started followng
-      <#elseif type=="COMMENT_POST">added a comment to
-      <#elseif type=="CCA_DATA_ADDED">created
-      <#else>updated
+      </a>
+      <#if type=="CCA_DATA_FOLLOW"> started followng
+      <#elseif type=="COMMENT_POST"> added a comment to
+      <#elseif type=="CCA_DATA_ADDED"> created
+      <#else> updated
       </#if> the following CCA data.
     </p>
-    <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
-      <table>
-        <tbody>
-          <caption style="margin-bottom: 1rem;"> ${activity.title}</caption>
-          <tr>
-            <td rowspan="5">
-              <a href="${serverUrl}/data/show/${data.id?c}">
-                <img
-                  src="${serverUrl}/files-api/api/get/crop/pages/ibpmu-UULV7G1Y7svuQCrCURUIx/${activity.image}"
-                  style="height: 100px; width: auto; border-radius: 0.5rem; margin-right: 0.5rem;"
-                />
-              </a>
-            </td>
-            <td>
-              <b>Name:</b> ${activity.title}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Ecosystem Type:</b> ${activity.ecosystem}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Area (ha):</b> ${activity.area}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Legal Status :</b> ${activity.legalStatus}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Name of CCA:</b> ${activity.nameOfCCA}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <#if (activity)??>
+      <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
+        <table>
+          <tbody>
+            <#if (activity.title)??>
+            <caption style="margin-bottom: 1rem;"> ${activity.title}</caption>
+            </#if>
+            <tr>
+              <td rowspan="5">
+                <#if (activity.image)??>
+                  <a href="${serverUrl}/data/show/${data.id?c}">
+                    <img
+                      src="${serverUrl}/files-api/api/get/crop/pages/ibpmu-UULV7G1Y7svuQCrCURUIx/${activity.image}"
+                      style="height: 100px; width: auto; border-radius: 0.5rem; margin-right: 0.5rem;"
+                    />
+                  </a>
+                </#if>
+              </td>
+              <td>
+                <#if (activity.title)??>
+                <b>Name:</b> ${activity.title}
+                </#if>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <#if (activity.ecosystem)??>
+                <b>Ecosystem Type:</b> ${activity.ecosystem}
+                </#if>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <#if (activity.area)??>
+                <b>Area (ha):</b> ${activity.area}
+                </#if>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <#if (activity.legalStatus)??>
+                <b>Legal Status :</b> ${activity.legalStatus}
+                </#if>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <#if (activity.nameOfCCA)??>
+                <b>Name of CCA:</b> ${activity.nameOfCCA}
+                </#if>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </#if>
     <#if type=="CCA_DATA_UPDATED">
       <div style="display: flex; flex-direction: row;">
           <span>
@@ -122,7 +138,7 @@
               </span></a>
                 <i>field updated</i>
             <div >
-              <div>${data.label} : ${data.old} -> ${data.new}</div>
+              <div>${data.label} : ${data.value}</div>
           </div>
           <div >
             <small >${data.time}</small>
@@ -132,9 +148,14 @@
     </#if>
   </#if>
 
-  <#if (data.id)?? && type!="CCA_DATA_DELETED" && type!="COMMENT_POST">
+  <#if type!="CCA_DATA_DELETED" && type!="COMMENT_POST">
     <p>
-      For more information, please visit the page <a href="${serverUrl}/data/show/${data.id?c}">here</a>
+      For more information, please visit the page
+      <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_DELETED">
+        <a href="${serverUrl}/${template.url}">here</a>
+      <#else>
+        <a href="${serverUrl}/data/show/${data.id?c}">here</a>
+      </#if>
     </p>
   </#if>
 
