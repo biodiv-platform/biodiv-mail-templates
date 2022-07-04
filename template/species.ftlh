@@ -79,7 +79,7 @@
                 
                 <#if whatPosted.icon?has_content>
                 <img
-                src="${serverUrl}/files-api/api/get/icon/100/100/img${whatPosted.icon}"
+                src="${serverUrl}/files-api/api/get/icon/100/100/${whatPosted.icon}"
                 style="width: 100px; height: 100px; margin-right: 24px"
                 alt="Species"
               />
