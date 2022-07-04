@@ -10,32 +10,36 @@
   </div>
 
   <p>Hi ${user.name},</p>
-  <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED">
+  <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_COMMENT">
     <p>
-      <#if type=="CCA_TEMPLATE_ADDED">Created <#else>Updated </#if>CCA template with short name: ${template.short_name}
+      <#if type=="CCA_TEMPLATE_ADDED">Created
+      <#elseif type=="CCA_TEMPLATE_COMMENT">Added a comment to
+      <#else>Updated
+      </#if> CCA template with short name: ${template.short_name}
     </p>
     <div style="display: flex; flex-direction: row;">
       <span>
-        <img src="https://staging.communityconservedareas.org/files-api/api/get/crop/users/ibpmu-AQgXorQe7ATMExgXTaqxC/631876356e984c25ba873b35d5df96cf.png?w=50" alt="Administrator" class="chakra-avatar__img css-3a5bz2">
+        <img src="${serverUrl}/files-api/api/get/crop/users/${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
       </span>
       <div style="display: flex; flex-direction: column; ">
-        <a href="/user/show/1"> <#if user.id==follower.id>You<#else>${user.name}</#if>
-          <span>
-            <svg style="height: 14px; width: 14px; " viewBox="0 0 16 16" focusable="false">
-              <path fill="currentColor" d="M9.585.52a2.678 2.678 0 00-3.17 0l-.928.68a1.178 1.178 0 01-.518.215L3.83 1.59a2.678 2.678 0 00-2.24 2.24l-.175 1.14a1.178 1.178 0 01-.215.518l-.68.928a2.678 2.678 0 000 3.17l.68.928c.113.153.186.33.215.518l.175 1.138a2.678 2.678 0 002.24 2.24l1.138.175c.187.029.365.102.518.215l.928.68a2.678 2.678 0 003.17 0l.928-.68a1.17 1.17 0 01.518-.215l1.138-.175a2.678 2.678 0 002.241-2.241l.175-1.138c.029-.187.102-.365.215-.518l.68-.928a2.678 2.678 0 000-3.17l-.68-.928a1.179 1.179 0 01-.215-.518L14.41 3.83a2.678 2.678 0 00-2.24-2.24l-1.138-.175a1.179 1.179 0 01-.518-.215L9.585.52zM7.303 1.728c.415-.305.98-.305 1.394 0l.928.68c.348.256.752.423 1.18.489l1.136.174c.51.078.909.478.987.987l.174 1.137c.066.427.233.831.489 1.18l.68.927c.305.415.305.98 0 1.394l-.68.928a2.678 2.678 0 00-.489 1.18l-.174 1.136a1.178 1.178 0 01-.987.987l-1.137.174a2.678 2.678 0 00-1.18.489l-.927.68c-.415.305-.98.305-1.394 0l-.928-.68a2.678 2.678 0 00-1.18-.489l-1.136-.174a1.178 1.178 0 01-.987-.987l-.174-1.137a2.678 2.678 0 00-.489-1.18l-.68-.927a1.178 1.178 0 010-1.394l.68-.928c.256-.348.423-.752.489-1.18l.174-1.136c.078-.51.478-.909.987-.987l1.137-.174a2.678 2.678 0 001.18-.489l.927-.68zM11.28 6.78a.75.75 0 00-1.06-1.06L7 8.94 5.78 7.72a.75.75 0 00-1.06 1.06l1.75 1.75a.75.75 0 001.06 0l3.75-3.75z"></path>
-            </svg>
-          </span>
-        </a>
-            <#if type=="CCA_TEMPLATE_ADDED">
-              Template created
-            <#else>
-            <i>Template updated</i>
+        <div>
+          <a href="/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${user.name}</#if>
+          </a>
+          ${activity.title}
+        </div>
             <div>
-              <div>${template.label} : ${template.value}</div>
+              <div>${activity.description}</div>
             </div>
-            </#if>
         <div >
-          <small >${template.time}</small>
+          <small>
+            <#if type=="CCA_TEMPLATE_COMMENT">
+              ${activity.time}
+            <#elseif type=="CCA_TEMPLATE_ADDED">
+              ${template.time}
+            <#else>
+              ${template.update_time}
+            </#if>
+          </small>
         </div>
       </div>
     </div>
@@ -51,72 +55,76 @@
   <#elseif type=="CCA_DATA_DELETED">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
-        <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${user.icon}">
+        <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/crop/users/${user.icon}?w=50">
         <#if user.id==follower.id>You<#else>${user.name}</#if>
       </a> deleted the CCA data with id : ${data.id}:
     </p>
 
-  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="COMMENT_POST" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW">
+  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
-        <img style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${user.icon}">
+        <img style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50">
         <#if user.id==follower.id>You<#else>${user.name}</#if>
       </a>
       <#if type=="CCA_DATA_FOLLOW"> started followng
-      <#elseif type=="COMMENT_POST"> added a comment to
+      <#elseif type=="CCA_DATA_COMMENT"> added a comment to
       <#elseif type=="CCA_DATA_ADDED"> created
+      <#elseif type=="CCA_DATA_PERMISSION"> 
+        given permission to <a style="text-decoration: none;" href="${serverUrl}/user/show/${permission.id?c}">
+          ${permission.name}
+        </a> to edit 
       <#else> updated
       </#if> the following CCA data.
     </p>
-    <#if (activity)??>
+    <#if (summary)??>
       <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
         <table>
           <tbody>
-            <#if (activity.title)??>
-            <caption style="margin-bottom: 1rem;"> ${activity.title}</caption>
+            <#if (summary.title)??>
+            <caption style="margin-bottom: 1rem;"> ${summary.title}</caption>
             </#if>
             <tr>
               <td rowspan="5">
-                <#if (activity.image)??>
+                <#if (summary.image)??>
                   <a href="${serverUrl}/data/show/${data.id?c}">
                     <img
-                      src="${serverUrl}/files-api/api/get/crop/pages/ibpmu-UULV7G1Y7svuQCrCURUIx/${activity.image}"
+                      src="${summary.image}"
                       style="height: 100px; width: auto; border-radius: 0.5rem; margin-right: 0.5rem;"
                     />
                   </a>
                 </#if>
               </td>
               <td>
-                <#if (activity.title)??>
-                <b>Name:</b> ${activity.title}
+                <#if (summary.title)??>
+                <b>Name:</b> ${summary.title}
                 </#if>
               </td>
             </tr>
             <tr>
               <td>
-                <#if (activity.ecosystem)??>
-                <b>Ecosystem Type:</b> ${activity.ecosystem}
+                <#if (summary.ecosystem)??>
+                <b>Ecosystem Type:</b> ${summary.ecosystem}
                 </#if>
               </td>
             </tr>
             <tr>
               <td>
-                <#if (activity.area)??>
-                <b>Area (ha):</b> ${activity.area}
+                <#if (summary.area)??>
+                <b>Area (ha):</b> ${summary.area}
                 </#if>
               </td>
             </tr>
             <tr>
               <td>
-                <#if (activity.legalStatus)??>
-                <b>Legal Status :</b> ${activity.legalStatus}
+                <#if (summary.legalStatus)??>
+                <b>Legal Status :</b> ${summary.legalStatus}
                 </#if>
               </td>
             </tr>
             <tr>
               <td>
-                <#if (activity.nameOfCCA)??>
-                <b>Name of CCA:</b> ${activity.nameOfCCA}
+                <#if (summary.nameOfCCA)??>
+                <b>Name of CCA:</b> ${summary.nameOfCCA}
                 </#if>
               </td>
             </tr>
@@ -124,34 +132,37 @@
         </table>
       </div>
     </#if>
-    <#if type=="CCA_DATA_UPDATED">
+    <#if type=="CCA_DATA_UPDATED" || type=="CCA_DATA_COMMENT">
       <div style="display: flex; flex-direction: row;">
           <span>
-            <img src="{serverUrl+/files-api/api/get/crop/users/ibpmu-AQgXorQe7ATMExgXTaqxC/631876356e984c25ba873b35d5df96cf.png?w=50" alt="Administrator" class="chakra-avatar__img css-3a5bz2">
+            <img src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
           </span>
-          <div style="display: flex; flex-direction: column; ">
-            <a href="/user/show/1">Administrator
-              <span>
-                <svg style="height: 14px; width: 14px; " viewBox="0 0 16 16" focusable="false">
-                  <path fill="currentColor" d="M9.585.52a2.678 2.678 0 00-3.17 0l-.928.68a1.178 1.178 0 01-.518.215L3.83 1.59a2.678 2.678 0 00-2.24 2.24l-.175 1.14a1.178 1.178 0 01-.215.518l-.68.928a2.678 2.678 0 000 3.17l.68.928c.113.153.186.33.215.518l.175 1.138a2.678 2.678 0 002.24 2.24l1.138.175c.187.029.365.102.518.215l.928.68a2.678 2.678 0 003.17 0l.928-.68a1.17 1.17 0 01.518-.215l1.138-.175a2.678 2.678 0 002.241-2.241l.175-1.138c.029-.187.102-.365.215-.518l.68-.928a2.678 2.678 0 000-3.17l-.68-.928a1.179 1.179 0 01-.215-.518L14.41 3.83a2.678 2.678 0 00-2.24-2.24l-1.138-.175a1.179 1.179 0 01-.518-.215L9.585.52zM7.303 1.728c.415-.305.98-.305 1.394 0l.928.68c.348.256.752.423 1.18.489l1.136.174c.51.078.909.478.987.987l.174 1.137c.066.427.233.831.489 1.18l.68.927c.305.415.305.98 0 1.394l-.68.928a2.678 2.678 0 00-.489 1.18l-.174 1.136a1.178 1.178 0 01-.987.987l-1.137.174a2.678 2.678 0 00-1.18.489l-.927.68c-.415.305-.98.305-1.394 0l-.928-.68a2.678 2.678 0 00-1.18-.489l-1.136-.174a1.178 1.178 0 01-.987-.987l-.174-1.137a2.678 2.678 0 00-.489-1.18l-.68-.927a1.178 1.178 0 010-1.394l.68-.928c.256-.348.423-.752.489-1.18l.174-1.136c.078-.51.478-.909.987-.987l1.137-.174a2.678 2.678 0 001.18-.489l.927-.68zM11.28 6.78a.75.75 0 00-1.06-1.06L7 8.94 5.78 7.72a.75.75 0 00-1.06 1.06l1.75 1.75a.75.75 0 001.06 0l3.75-3.75z"></path>
-                </svg>
-              </span></a>
-                <i>field updated</i>
-            <div >
-              <div>${data.label} : ${data.value}</div>
-          </div>
+          <div style="display: flex; flex-direction: column; margin-left: 0.5rem;">
+            <div>
+              <a href="/user/show/${user.id?c}">${user.name}</a>
+              <i style="padding-left: .5rem;">${activity.title}</i>
+            </div>
+            <div style="padding-top: 0.5rem;">
+              <div>${activity.description}</div>
+            </div>
           <div >
-            <small >${data.time}</small>
+            <#if type=="CCA_DATA_COMMENT">
+              ${activity.time}
+            <#elseif type=="CCA_DATA_ADDED">
+              ${data.time}
+            <#else>
+              ${data.updated_time}
+            </#if>
           </div>
         </div>
       </div>
     </#if>
   </#if>
 
-  <#if type!="CCA_DATA_DELETED" && type!="COMMENT_POST">
+  <#if type!="CCA_DATA_DELETED">
     <p>
       For more information, please visit the page
-      <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_DELETED">
+      <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_DELETED" || type="CCA_TEMPLATE_COMMENT">
         <a href="${serverUrl}/${template.url}">here</a>
       <#else>
         <a href="${serverUrl}/data/show/${data.id?c}">here</a>
