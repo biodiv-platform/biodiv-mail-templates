@@ -8,7 +8,6 @@
       />
     </a>
   </div>
-
   <p>Hi ${user.name},</p>
   <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_COMMENT">
     <p>
@@ -23,7 +22,7 @@
       </span>
       <div style="display: flex; flex-direction: column; ">
         <div>
-          <a href="/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${user.name}</#if>
+          <a href="${serverUrl}/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${user.name}</#if>
           </a>
           ${activity.title}
         </div>
@@ -69,10 +68,50 @@
       <#if type=="CCA_DATA_FOLLOW"> started followng
       <#elseif type=="CCA_DATA_COMMENT"> added a comment to
       <#elseif type=="CCA_DATA_ADDED"> created
-      <#elseif type=="CCA_DATA_PERMISSION"> 
-        given permission to <a style="text-decoration: none;" href="${serverUrl}/user/show/${permission.id?c}">
-          ${permission.name}
-        </a> to edit 
+      <#elseif type=="CCA_DATA_PERMISSION">
+        Added permission to below users
+        <table style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0">
+          <#list permissions?chunk(2) as row>
+            <tr>
+              <#list row as memberOf>
+                <#if (memberOf.id)??>
+                  <td>
+                      <a
+                        style="
+                          display: block;
+                          align-items: center;
+                          border: 2px solid #e2e8f0;
+                          border-radius: 0.375rem;
+                          text-decoration: none;
+                          color: inherit;
+                          height: 3rem;
+                          line-height: 3rem;
+                          text-overflow:ellipsis;
+                          overflow:hidden;
+                          white-space:nowrap;
+                          margin-right: 0.75rem;
+                          margin-bottom: 0.75rem;
+                        "
+                        href="${serverUrl}/user/show/${memberOf.id}" >
+                        <#if (memberOf.icon)??>
+                          <img src="${serverUrl}/files-api/api/get/crop/users/${memberOf.icon}?w=50" style="
+                            float: left;
+                            height: 35px;
+                            width: 35px;
+                            object-fit: contain;
+                            padding: 0.4rem;
+                          "/>
+                        </#if>
+                        ${memberOf.name}
+                    </a>
+                  </td>
+                </#if>
+              </#list>
+            </tr>
+          </#list>
+        </table>
+        to contribute to
+        </a>
       <#else> updated
       </#if> the following CCA data.
     </p>

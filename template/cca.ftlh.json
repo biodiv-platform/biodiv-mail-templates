@@ -2,7 +2,7 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://staging.communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_TEMPLATE_COMMENT",
+  "type": "CCA_DATA_FOLLOW",
 
   "user": {
     "id": 2,
@@ -65,6 +65,24 @@
       }
     ]
   },
+
+  "permissions": [
+      {
+        "id": 1,
+        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
+        "name": "Indian Moths"
+      },
+      {
+        "id": 2,
+        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
+        "name": "Indian Moths mm"
+      },
+      {
+        "id": 3,
+        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
+        "name": "Indian Moths mm"
+      }
+    ],
 
   "added" : {
 
