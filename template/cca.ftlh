@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <div style="padding: 40px 60px">
 
   <div style="margin: 0 0 20px 0">
