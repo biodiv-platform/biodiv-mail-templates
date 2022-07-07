@@ -21,15 +21,15 @@
         <img src="${serverUrl}/files-api/api/get/crop/users/${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
       </span>
       <div style="display: flex; flex-direction: column; ">
-        <div>
-          <a href="${serverUrl}/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${user.name}</#if>
+        <div style="display: flex; flex-direction: row;">
+          <a style="padding-top: 1rem;" href="${serverUrl}/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${follower.name}</#if>
           </a>
-          ${activity.title}
+          <p style="font-style: italic; padding-left: 0.5rem;" lang="hi">${activity.title}</p>
         </div>
             <div>
-              <div>${activity.description}</div>
+              <div lang="hi">${activity.description}</div>
             </div>
-        <div >
+        <div>
           <small>
             <#if type=="CCA_TEMPLATE_COMMENT">
               ${activity.time}
@@ -47,7 +47,7 @@
     <p>
       <a style="text-decoration: none;" href="${serverUrl}">
         <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}+'/files-api/api/get/icon/32/32/users'+${user.icon}">
-        <#if user.id==follower.id>You<#else>${user.name}</#if>
+        <#if user.id==follower.id>You<#else>${follower.name}</#if>
       </a> deleted the template with short name: ${template.short_name}
     </p>
 
@@ -55,7 +55,7 @@
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/crop/users/${user.icon}?w=50">
-        <#if user.id==follower.id>You<#else>${user.name}</#if>
+        <#if user.id==follower.id>You<#else>${follower.name}</#if>
       </a> deleted the CCA data with id : ${data.id}:
     </p>
 
@@ -63,7 +63,7 @@
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <img style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50">
-        <#if user.id==follower.id>You<#else>${user.name}</#if>
+        <#if user.id==follower.id>You<#else>${follower.name}</#if>
       </a>
       <#if type=="CCA_DATA_FOLLOW"> started followng
       <#elseif type=="CCA_DATA_COMMENT"> added a comment to
@@ -178,11 +178,11 @@
           </span>
           <div style="display: flex; flex-direction: column; margin-left: 0.5rem;">
             <div>
-              <a href="/user/show/${user.id?c}">${user.name}</a>
-              <i style="padding-left: .5rem;">${activity.title}</i>
+              <a href="/user/show/${user.id?c}">${follower.name}</a>
+              <i style="padding-left: .5rem; font-style: italic;">${activity.title}</i>
             </div>
             <div style="padding-top: 0.5rem;">
-              <div>${activity.description}</div>
+              <div lang="hi">${activity.description}</div>
             </div>
           <div >
             <#if type=="CCA_DATA_COMMENT">
@@ -198,16 +198,14 @@
     </#if>
   </#if>
 
-  <#if type!="CCA_DATA_DELETED">
-    <p>
-      For more information, please visit the page
-      <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_DELETED" || type="CCA_TEMPLATE_COMMENT">
-        <a href="${serverUrl}/${template.url}">here</a>
-      <#else>
-        <a href="${serverUrl}/data/show/${data.id?c}">here</a>
-      </#if>
-    </p>
-  </#if>
+  <p>
+    For more information, please visit the page
+    <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_DELETED" || type="CCA_TEMPLATE_COMMENT">
+      <a href="${serverUrl}/${template.url}">here</a>
+    <#else>
+      <a href="${serverUrl}/data/show/${data.id?c}">here</a>
+    </#if>
+  </p>
 
   <hr
     style="

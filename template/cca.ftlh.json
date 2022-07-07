@@ -2,7 +2,7 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://staging.communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_DATA_FOLLOW",
+  "type": "CCA_TEMPLATE_UPDATED",
 
   "user": {
     "id": 2,
@@ -27,7 +27,7 @@
   },
 
   "activity" : {
-    "description" : "description",
+    "description" : "लंबी प्रश्नावली description",
     "title" : "Title",
     "time" : "2 hour ago"
   },
@@ -54,16 +54,7 @@
   "follower": {
     "id": 2,
     "name": "Harsh",
-    "users": [
-      {
-        "id" : 1,
-        "name" : "gks"
-      },
-      {
-        "id" : 2,
-        "name": "vishnu"
-      }
-    ]
+    "icon" : "ibpmu-AQgXorQe7ATMExgXTaqxC/631876356e984c25ba873b35d5df96cf.png"
   },
 
   "permissions": [
