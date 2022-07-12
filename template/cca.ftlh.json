@@ -3,7 +3,6 @@
   "serverUrl": "https://staging.communityconservedareas.org",
   "submitType": "post",
   "type": "CCA_DATA_UNFOLLOW",
-
   "user": {
     "id": 2,
     "name": "Administrator",
