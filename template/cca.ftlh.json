@@ -2,8 +2,7 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://staging.communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_TEMPLATE_UPDATED",
-
+  "type": "CCA_DATA_UNFOLLOW",
   "user": {
     "id": 2,
     "name": "Administrator",
