@@ -28,7 +28,7 @@
           <p style="font-style: italic; padding-left: 0.5rem;" lang="hi">${activity.title}</p>
         </div>
             <div>
-              <div lang="hi">${activity.description}</div>
+              <div>${activity.description}</div>
             </div>
         <div>
           <small>
@@ -60,13 +60,14 @@
       </a> deleted the CCA data with id : ${data.id}:
     </p>
 
-  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW">
+  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <img style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50">
         <#if user.id==follower.id>You<#else>${follower.name}</#if>
       </a>
       <#if type=="CCA_DATA_FOLLOW"> started followng
+      <#elseif type=="CCA_DATA_UNFOLLOW"> unfollow
       <#elseif type=="CCA_DATA_COMMENT"> added a comment to
       <#elseif type=="CCA_DATA_ADDED"> created
       <#elseif type=="CCA_DATA_PERMISSION">
