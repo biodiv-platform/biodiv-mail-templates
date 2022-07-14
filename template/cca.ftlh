@@ -175,26 +175,24 @@
     </#if>
     <#if type=="CCA_DATA_UPDATED" || type=="CCA_DATA_COMMENT">
       <div>
-          <div style="display: flex; flex-direction: column; margin-left: 0.5rem;">
-            <div style="display: flex; flex-direction: row;">
-              <span>
-                <img src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
-              </span>
-              <a style="margin-left: 0.5rem;" href="/user/show/${follower.id?c}">${follower.name}</a>
-              <i style="padding-left: .5rem; font-style: italic;">${activity.title}</i>
-            </div>
-            <div style="padding-top: 0.5rem;">
-              <div lang="hi">${activity.description}</div>
-            </div>
-            <div >
-              <#if type=="CCA_DATA_COMMENT">
-                ${activity.time}
-              <#elseif type=="CCA_DATA_ADDED">
-                ${data.time}
-              <#else>
-                ${data.updated_time}
-              </#if>
-            </div>
+        <div style="display: flex; flex-direction: row;">
+          <span>
+            <img src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
+          </span>
+          <a style="margin-left: 0.5rem;" href="/user/show/${follower.id?c}">${follower.name}</a>
+          <i style="padding-left: .5rem; font-style: italic;">${activity.title}</i>
+        </div>
+        <div style="padding-top: 0.5rem;">
+          <div lang="hi">${activity.description}</div>
+        </div>
+        <div>
+          <#if type=="CCA_DATA_COMMENT">
+            ${activity.time}
+          <#elseif type=="CCA_DATA_ADDED">
+            ${data.time}
+          <#else>
+            ${data.updated_time}
+          </#if>
         </div>
       </div>
     </#if>
