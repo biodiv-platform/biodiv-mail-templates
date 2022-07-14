@@ -1,12 +1,12 @@
 {
   "siteName": "Community Conserved Areas",
-  "serverUrl": "https://staging.communityconservedareas.org",
+  "serverUrl": "https://communityconservedareas.org",
   "submitType": "post",
   "type": "CCA_DATA_COMMENT",
   "user": {
     "id": 2,
     "name": "Administrator",
-    "icon": "ibpmu-AQgXorQe7ATMExgXTaqxC/631876356e984c25ba873b35d5df96cf.png"
+    "icon": ""
   },
 
   "data" : {
