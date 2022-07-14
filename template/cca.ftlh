@@ -17,30 +17,38 @@
       <#else>Updated
       </#if> CCA template with short name: ${template.short_name}
     </p>
-    <div style="display: flex; flex-direction: row;">
-      <span>
-        <img src="${serverUrl}/files-api/api/get/crop/users/${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
-      </span>
-      <div style="display: flex; flex-direction: column; ">
-        <div style="display: flex; flex-direction: row;">
-          <a style="padding-top: 1rem;" href="${serverUrl}/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${follower.name}</#if>
-          </a>
-          <p style="font-style: italic; padding-left: 0.5rem;" lang="hi">${activity.title}</p>
-        </div>
-            <div>
-              <div>${activity.description}</div>
-            </div>
-        <div>
-          <small>
-            <#if type=="CCA_TEMPLATE_COMMENT">
-              ${activity.time}
-            <#elseif type=="CCA_TEMPLATE_ADDED">
-              ${template.time}
-            <#else>
-              ${template.update_time}
-            </#if>
-          </small>
-        </div>
+    <div>
+      <div style="display: flex; flex-direction: row;">
+        <span>
+          <#if user.icon?has_content>
+            <img
+            style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" 
+            src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50"
+            />
+          <#else>
+            <img
+            src="${serverUrl}/biodiv/users/user.png?w=50"
+            style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;"
+            />
+          </#if>
+        </span>
+        <a style="padding-top: 1rem;" href="${serverUrl}/user/show/${user.id}"> <#if user.id==follower.id> You<#else>${follower.name}</#if>
+        </a>
+        <p style="font-style: italic; padding-left: 0.5rem;" lang="hi">${activity.title}</p>
+      </div>
+          <div>
+            <div>${activity.description}</div>
+          </div>
+      <div>
+        <small>
+          <#if type=="CCA_TEMPLATE_COMMENT">
+            ${activity.time}
+          <#elseif type=="CCA_TEMPLATE_ADDED">
+            ${template.time}
+          <#else>
+            ${template.update_time}
+          </#if>
+        </small>
       </div>
     </div>
 
@@ -63,7 +71,17 @@
   <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
-        <img style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50">
+        <#if user.icon?has_content>
+          <img
+          style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" 
+          src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50"
+          />
+        <#else>
+          <img
+          src="${serverUrl}/biodiv/users/user.png?w=50"
+          style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;"
+          />
+        </#if>
         <#if user.id==follower.id>You<#else>${follower.name}</#if>
       </a>
       <#if type=="CCA_DATA_FOLLOW"> started followng
@@ -177,7 +195,17 @@
       <div>
         <div style="display: flex; flex-direction: row;">
           <span>
-            <img src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50" class="chakra-avatar__img css-3a5bz2">
+            <#if user.icon?has_content>
+              <img
+              style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;"
+              src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50"
+              />
+            <#else>
+              <img
+              src="${serverUrl}/biodiv/users/user.png?w=50"
+              style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;"
+              />
+            </#if>
           </span>
           <a style="margin-left: 0.5rem;" href="/user/show/${follower.id?c}">${follower.name}</a>
           <i style="padding-left: .5rem; font-style: italic;">${activity.title}</i>
