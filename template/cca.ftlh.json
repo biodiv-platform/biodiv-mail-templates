@@ -2,12 +2,15 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_DATA_COMMENT",
+  "type": "CCA_DATA_PERMISSION_REQUEST",
   "user": {
     "id": 2,
     "name": "Administrator",
     "icon": ""
   },
+
+  "encrypted_key": "xyz",
+  "taxon-request" : "",
 
   "data" : {
     "id": 392709,

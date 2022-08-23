@@ -68,12 +68,12 @@
       </a> deleted the CCA data with id : ${data.id}:
     </p>
 
-  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW">
+  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW" || type=="CCA_DATA_PERMISSION_REQUEST">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <#if user.icon?has_content>
           <img
-          style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" 
+          style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;"
           src="${serverUrl}/files-api/api/get/crop/users${user.icon}?w=50"
           />
         <#else>
@@ -86,6 +86,7 @@
       </a>
       <#if type=="CCA_DATA_FOLLOW"> started followng
       <#elseif type=="CCA_DATA_UNFOLLOW"> unfollow
+      <#elseif type=="CCA_DATA_PERMISSION_REQUEST"> requested permission to
       <#elseif type=="CCA_DATA_COMMENT"> added a comment to
       <#elseif type=="CCA_DATA_ADDED"> created
       <#elseif type=="CCA_DATA_PERMISSION">
@@ -225,7 +226,28 @@
       </div>
     </#if>
   </#if>
-
+  <#if type=="CCA_DATA_PERMISSION_REQUEST">
+      <div
+        style="
+          text-align: center;
+        "
+      >
+          <a
+            href="${serverUrl}/continue/verify-request?token=${encrypted_key}&id=${data.id}&type=cca-request"
+            style="
+              background-color: #38a169;
+              border-radius: 5px;
+              color: #fff;
+              display: inline-block;
+              line-height: 50px;
+              text-align: center;
+              text-decoration: none;
+              width: 180px;
+            "
+            >Approve Request</a
+          >
+      </div>
+  </#if>
   <p>
     For more information, please visit the page
     <#if type=="CCA_TEMPLATE_ADDED" || type=="CCA_TEMPLATE_UPDATED" || type=="CCA_TEMPLATE_DELETED" || type="CCA_TEMPLATE_COMMENT">
