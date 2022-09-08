@@ -1,0 +1,23 @@
+{
+    "siteName": "India Biodiversity Portal",
+    "serverUrl": "https://indiabiodiversity.org",
+    "submitType": "post",
+    "type": "PAGE_CREATE",
+    "whoPosted": {
+      "id": 3885,
+      "name": "Sunny Joseph",
+      "icon": "/c73dce40-c9a5-4e48-9036-c3e6b73dbe49/resources/893.JPG?w=50"
+    },
+    "whatPosted": {
+      "id": 392709,
+      "authorId": 1,
+      "title":"Page Title"  
+     },
+    "follower": {
+      "id": 2,
+      "name": "Harsh"
+    },
+    "commentBody": "Lorem ipsum dolor",
+    "unregisterEmailNotification": "xyz"
+  }
+  
