@@ -64,7 +64,7 @@
               </a>
             </td>
             <td>
-              <b>Title:</b> ${whatPosted.title}
+              <b>Title:</b> ${whatPosted.name}
             </td>
           </tr>
         </tbody>
