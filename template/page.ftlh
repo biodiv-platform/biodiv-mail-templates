@@ -21,7 +21,7 @@
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> added the following Page:
+        </a> added the following page:
       </p>
     
     <#elseif type=="PAGE_DELETED">
@@ -30,7 +30,7 @@
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> deleted the following Page:
+        </a> deleted the following page:
       </p>
     
     <#elseif type=="PAGE_UPDATE">
@@ -39,7 +39,7 @@
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> updated the following Page:
+        </a> updated the following page:
       </p>
     </#if>
   
