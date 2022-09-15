@@ -53,18 +53,10 @@
       <table>
         <tbody>
           <tr>
-            <td rowspan="3" style="padding-right: 15px;">
-              <a href="${serverUrl}/page/show/${whatPosted.id?c}">
-                
-                <img
-                src="${serverUrl+'/biodiv/newsletters/welcome/document-icon.png'}"
-                style="width: 80px; height: 80px; margin-right: 24px"
-                alt="page"
-              />
-              </a>
-            </td>
             <td>
+              <a href="${serverUrl}/page/show/${whatPosted.id?c}">
               <b>Title:</b> ${whatPosted.name}
+              </a>
             </td>
           </tr>
         </tbody>
