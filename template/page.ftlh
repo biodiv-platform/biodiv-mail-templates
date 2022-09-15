@@ -54,8 +54,9 @@
         <tbody>
           <tr>
             <td>
+            <b>Title:</b>
               <a href="${serverUrl}/page/show/${whatPosted.id?c}">
-              <b>Title:</b> ${whatPosted.name}
+               ${whatPosted.name}
               </a>
             </td>
           </tr>
