@@ -60,6 +60,14 @@
       </a> deleted the template with short name: ${template.short_name}
     </p>
 
+  <#elseif type=="TAGGED_MAIL">
+    <p>Hi ${follower.name},</p>
+    <p>
+      <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
+        <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
+        ${whoPosted.name}
+      </a> has tagged you in a comment on the page listed below.
+    </p>
   <#elseif type=="CCA_DATA_DELETED">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
