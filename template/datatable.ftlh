@@ -46,6 +46,10 @@
       </p>
     </#if>
 
+    <#if type=="COMMENT_POST" || type=="DATATABLE_COMMENT_POST" >
+    <div style="margin-bottom: 1.4rem; padding: 1rem; border-radius: 0.5rem; background: #EDF2F7">${commentBody}</div>
+    </#if>
+
 
     <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;overflow-wrap: break-word;">
       <table>
