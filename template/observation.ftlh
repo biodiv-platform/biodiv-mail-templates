@@ -260,36 +260,36 @@
   <p>
     You can log into your profile <a href="${serverUrl}/user/show/${downloadMail.id?c}">here</a>
   </p>
-<#else>
-<div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
-  <table>
-    <tbody>
-      <tr>
-        <td rowspan="3">
-          <a href="${serverUrl}/observation/show/${whatPosted.id?c}">
-            <img
-              src="${serverUrl}/files-api/api/get/icon/100/100/observations${whatPosted.icon}"
-              style="height: 100px; width: auto; border-radius: 0.5rem; margin-right: 0.5rem;"
-            />
-          </a>
-        </td>
-        <td>
-          <b>Name:</b> ${whatPosted.name}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <b>Location:</b> ${whatPosted.location}
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <b>Observed On:</b> ${whatPosted.observedOn} UTC
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<#elseif (whatPosted.id)??>
+  <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
+    <table>
+      <tbody>
+        <tr>
+          <td rowspan="3">
+            <a href="${serverUrl}/observation/show/${whatPosted.id?c}">
+              <img
+                src="${serverUrl}/files-api/api/get/icon/100/100/observations${whatPosted.icon}"
+                style="height: 100px; width: auto; border-radius: 0.5rem; margin-right: 0.5rem;"
+              />
+            </a>
+          </td>
+          <td>
+            <b>Name:</b> ${whatPosted.name}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Location:</b> ${whatPosted.location}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Observed On:</b> ${whatPosted.observedOn} UTC
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 <div style="margin-bottom: 0.5rem;">The above observation is a member of the following groups: </div>
 

@@ -7,13 +7,18 @@
         />
       </a>
     </div>
-    <#if type=="COMMENT_POST" || type=="DOCUMENT_COMMENT_POST">
+    <#if type=="COMMENT_POST" || type=="DOCUMENT_COMMENT_POST"|| type=="TAGGED_MAIL">
       <p>Hi ${follower.name},</p>
       <p>
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
           <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
           ${whoPosted.name}
-        </a> added a comment to the page listed below.
+        </a> 
+      <#if type=="TAGGED_MAIL">
+        has tagged you in a comment on the page listed below.
+      <#else>
+        added a comment to the page listed below.
+      </#if>
       </p>
     <#elseif type=="DOCUMENT_ADDED">
       <p>Hi ${follower.name},</p>
