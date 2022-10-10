@@ -68,6 +68,16 @@
               <b>Title:</b> ${whatPosted.name}
             </td>
           </tr>
+          <tr>
+            <td>
+              <b>Location:</b> ${whatPosted.location}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Observed On:</b> ${whatPosted.observedOn} UTC
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
