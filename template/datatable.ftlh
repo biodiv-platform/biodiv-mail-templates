@@ -75,7 +75,7 @@
           </tr>
           <tr>
             <td>
-              <b>Observed On:</b> ${whatPosted.observedOn} UTC
+              <b>Created On:</b> ${whatPosted.observedOn} UTC
             </td>
           </tr>
         </tbody>
