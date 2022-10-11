@@ -68,11 +68,11 @@
               <b>Title:</b> ${whatPosted.name}
             </td>
           </tr>
-          <!-- <tr>
+          <tr>
             <td>
               <b>Location:</b> ${whatPosted.location}
             </td>
-          </tr> -->
+          </tr>
           <tr>
             <td>
               <b>Observed On:</b> ${whatPosted.observedOn} UTC
