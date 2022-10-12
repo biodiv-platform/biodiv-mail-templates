@@ -15,7 +15,7 @@
           ${whoPosted.name}
         </a> added a comment to the page listed below.
       </p>
-    <#elseif type=="DATATABLE_CREATE">
+    <#elseif type=="DATATABLE_CREATED">
       <p>Hi ${follower.name},</p>
       <p>
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
@@ -24,7 +24,7 @@
         </a> added the following Datatable:
       </p>
 
-    <#elseif type=="DATATABLE_DELETE">
+    <#elseif type=="DATATABLE_DELETED">
       <p>Hi ${follower.name},</p>
       <p>
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
