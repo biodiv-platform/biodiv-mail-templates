@@ -76,7 +76,7 @@
       </a> deleted the CCA data with id : ${data.id}:
     </p>
 
-  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW">
+  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW" || type=="CCA_DATA_PERMISSION_REMOVED">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <#if user.icon?has_content>
@@ -98,20 +98,17 @@
       <#elseif type=="CCA_DATA_ADDED"> created
       <#elseif type=="CCA_DATA_PERMISSION">
         Added permission to below users
-        <table style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0">
-          <#list permissions?chunk(2) as row>
-            <tr>
+                  <#list permissions?chunk(2) as row>
               <#list row as memberOf>
                 <#if (memberOf.id)??>
-                  <td>
                       <a
                         style="
-                          display: block;
+                          display: contents;
                           align-items: center;
                           border: 2px solid #e2e8f0;
                           border-radius: 0.375rem;
                           text-decoration: none;
-                          color: inherit;
+                          color: blue;
                           height: 3rem;
                           line-height: 3rem;
                           text-overflow:ellipsis;
@@ -121,23 +118,40 @@
                           margin-bottom: 0.75rem;
                         "
                         href="${serverUrl}/user/show/${memberOf.id}" >
-                        <#if (memberOf.icon)??>
-                          <img src="${serverUrl}/files-api/api/get/crop/users/${memberOf.icon}?w=50" style="
-                            float: left;
-                            height: 35px;
-                            width: 35px;
-                            object-fit: contain;
-                            padding: 0.4rem;
-                          "/>
-                        </#if>
                         ${memberOf.name}
-                    </a>
-                  </td>
+                    </a> ,
                 </#if>
               </#list>
-            </tr>
           </#list>
-        </table>
+          to contribute to
+        </a>
+        <#elseif type=="CCA_DATA_PERMISSION_REMOVED">
+        Removed permission to below users
+          <#list permissions?chunk(2) as row>
+              <#list row as memberOf>
+                <#if (memberOf.id)??>
+                      <a
+                        style="
+                          display: contents;
+                          align-items: center;
+                          border: 2px solid #e2e8f0;
+                          border-radius: 0.375rem;
+                          text-decoration: none;
+                          color: blue;
+                          height: 3rem;
+                          line-height: 3rem;
+                          text-overflow:ellipsis;
+                          overflow:hidden;
+                          white-space:nowrap;
+                          margin-right: 0.75rem;
+                          margin-bottom: 0.75rem;
+                        "
+                        href="${serverUrl}/user/show/${memberOf.id}" >
+                        ${memberOf.name}
+                    </a> ,
+                </#if>
+              </#list>
+          </#list>
         to contribute to
         </a>
       <#else> updated
