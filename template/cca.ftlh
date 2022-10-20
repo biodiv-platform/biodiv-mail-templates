@@ -98,8 +98,7 @@
       <#elseif type=="CCA_DATA_ADDED"> created
       <#elseif type=="CCA_DATA_PERMISSION">
         Added permission to below users
-                  <#list permissions?chunk(2) as row>
-              <#list row as memberOf>
+              <#list permissions as memberOf>
                 <#if (memberOf.id)??>
                       <a
                         style="
@@ -118,17 +117,15 @@
                           margin-bottom: 0.75rem;
                         "
                         href="${serverUrl}/user/show/${memberOf.id}" >
-                        ${memberOf.name}
-                    </a> ,
+                        ${memberOf.name}<#sep>, </#sep>
+                    </a>
                 </#if>
-              </#list>
           </#list>
           to contribute to
         </a>
         <#elseif type=="CCA_DATA_PERMISSION_REMOVED">
         Removed permission to below users
-          <#list permissions?chunk(2) as row>
-              <#list row as memberOf>
+              <#list permissions as memberOf>
                 <#if (memberOf.id)??>
                       <a
                         style="
@@ -147,10 +144,10 @@
                           margin-bottom: 0.75rem;
                         "
                         href="${serverUrl}/user/show/${memberOf.id}" >
-                        ${memberOf.name}
-                    </a> ,
+                        ${memberOf.name}<#sep>, </#sep>
+                    </a>
                 </#if>
-              </#list>
+              
           </#list>
         to contribute to
         </a>
