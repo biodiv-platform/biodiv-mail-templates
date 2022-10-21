@@ -97,7 +97,7 @@
       <#elseif type=="CCA_DATA_COMMENT"> added a comment to
       <#elseif type=="CCA_DATA_ADDED"> created
       <#elseif type=="CCA_DATA_PERMISSION">
-        Added permission to below users
+        Added permission for users
               <#list permissions as memberOf>
                 <#if (memberOf.id)??>
                       <a
@@ -124,7 +124,7 @@
           to contribute to
         </a>
         <#elseif type=="CCA_DATA_PERMISSION_REMOVED">
-        Removed permission to below users
+        Removed permission for users
               <#list permissions as memberOf>
                 <#if (memberOf.id)??>
                       <a
