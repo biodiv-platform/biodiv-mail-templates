@@ -13,7 +13,7 @@
 
 <p>
   <a target="_blank" href="${serverUrl}/user/show/${inviter.id?c}">${inviter.name}</a>
-  is inviting you to be a
+  has added you to be a
   <#if role=="Founder">
     founder for the
   <#elseif role=="Moderator">
@@ -30,7 +30,7 @@
   ">${group.name}</a> on ${siteName}.
 </p>
 
-<div style="margin: 32px 0">
+<!-- <div style="margin: 32px 0">
   <a
     href="
     <#if group.webAddress?starts_with("/group")>
@@ -51,7 +51,7 @@
     "
     >Accept Invitation</a
   >
-</div>
+</div> -->
 
 <p>
   Regards,<br />
