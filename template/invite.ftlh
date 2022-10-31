@@ -13,11 +13,11 @@
 
 <p>
   <a target="_blank" href="${serverUrl}/user/show/${inviter.id?c}">${inviter.name}</a>
-  has added you to be a
+  added you as a
   <#if role=="Founder">
-    founder for the
+    founder of the
   <#elseif role=="Moderator">
-    moderator for the
+    moderator of the
   <#else>
     member in this
   </#if>
@@ -30,28 +30,7 @@
   ">${group.name}</a> on ${siteName}.
 </p>
 
-<!-- <div style="margin: 32px 0">
-  <a
-    href="
-    <#if group.webAddress?starts_with("/group")>
-      ${serverUrl}${group.webAddress}/continue/verify-invitation?token=${encrypted_key}&type=verify-invitation
-    <#else>
-      ${group.webAddress}/continue/verify-invitation?token=${encrypted_key}&type=verify-invitation
-    </#if>
-    "
-    style="
-      background-color: #38A169;
-      border-radius: 5px;
-      color: #fff;
-      display: inline-block;
-      line-height: 50px;
-      text-align: center;
-      text-decoration: none;
-      width: 180px;
-    "
-    >Accept Invitation</a
-  >
-</div> -->
+
 
 <p>
   Regards,<br />
