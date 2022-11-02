@@ -76,7 +76,8 @@
       </a> deleted the CCA data with id : ${data.id}:
     </p>
 
-  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW" || type=="CCA_DATA_PERMISSION_REMOVED">
+  <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" || type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW" 
+      || type=="CCA_DATA_PERMISSION_REMOVED"|| type=="CCA_PERMISSION_REQUEST">
     <p>
       <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
         <#if user.icon?has_content>
@@ -90,7 +91,9 @@
           style="display: inlvine;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;"
           />
         </#if>
-        <#if user.id==follower.id>You<#else>${follower.name}</#if>
+        <#if type!="CCA_PERMISSION_REQUEST">
+          <#if user.id==follower.id>You<#else>${follower.name}</#if>
+        </#if>
       </a>
       <#if type=="CCA_DATA_FOLLOW"> started followng
       <#elseif type=="CCA_DATA_UNFOLLOW"> unfollow
@@ -147,10 +150,13 @@
                         ${memberOf.name}<#sep>, </#sep>
                     </a>
                 </#if>
-              
           </#list>
         to contribute to
         </a>
+        <#elseif type=="CCA_PERMISSION_REQUEST">
+          <p> Hi ${name} ,</p>
+          <a href="${serverUrl}/user/show/${requestor.id?c}">${requestor.name}</a>
+          is requesting to be a Contibutor of the CCA
       <#else> updated
       </#if> the following CCA data.
     </p>
@@ -240,10 +246,36 @@
           <#else>
             ${data.updated_time}
           </#if>
+         
+
         </div>
       </div>
     </#if>
   </#if>
+  <#if type=="CCA_PERMISSION_REQUEST">
+  <a
+  href='
+
+    '
+  style="
+    background-color: #38A169;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+  "
+  >Approve Request</a>
+
+  <p>To deny, you need not perform any action.</p>
+
+  <p>
+    Regards,<br/>
+    The ${siteName} Team
+  </p>
+</#if>
 
   <p>
     For more information, please visit the page

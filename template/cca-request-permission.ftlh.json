@@ -1,0 +1,49 @@
+{
+    "name": "Administrator",
+    "siteName": "Community Conserved Areas",
+    "serverUrl": "https://communityconservedareas.org",
+    "group": {
+      "webAddress": "/group/IndianMoths/show",
+      "name": "Indian Moths"
+    },
+    "summary": {
+        "title" : "Title value",
+        "ecosystem" : "Ecosystem value",
+        "area": "Area value",
+        "legalStatus": "Legal status value",
+        "nameOfCCA": "Name of CCA value",
+        "image" : "https://communityconservedareas.org/files-api/api/get/raw/pages/ibpmu-558fA4_4CBDJ1hYCPBJSB/a01a33cddd9e49e2a85f105c79b98403.JPG"
+      },
+    "encrypted_key": "xyz",
+    "requestor": {
+      "id": 815309,
+      "name": "Harsh"
+    },
+    "data" : {
+      "id": 392709,
+      "url": "data_url",
+      "label" : "location summary field",
+      "value" : "true",
+      "time" : "3 hour ago",
+      "updated_time": "3 hour ago"
+    },
+  
+    "template" : {
+      "short_name" : "Long",
+      "url" : "template/list",
+      "time" : "3 hour ago",
+      "update_time" : "3 hour ago"
+    },
+  
+    "activity" : {
+      "description" : "This is a very well known CCA case study.",
+      "title" : "Commented",
+      "time" : "2 hour ago"
+    },
+  
+    "comment": {
+      "title": "Comment title",
+      "description": "comment description"
+    }
+}
+  

@@ -2,7 +2,7 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_DATA_COMMENT",
+  "type": "CCA_PERMISSION_REQUEST",
   "user": {
     "id": 2,
     "name": "Administrator",
@@ -83,5 +83,11 @@
     "name": "XYZ"
   },
   "unregisterEmailNotification": "xyz",
-  "test" : "2"
+  "test" : "2",
+  "encrypted_key": "xyz",
+  "requestor": {
+    "id": 815309,
+    "name": "Harsh"
+  },
+  "name":"owner"
 }
