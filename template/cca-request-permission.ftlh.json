@@ -1,0 +1,11 @@
+{
+  "name": "Administrator",
+  "siteName": "Community Conserved Areas",
+  "serverUrl": "https://communityconservedareas.org",
+  "encrypted_key": "xyz",
+  "requestorId": 815309,
+  "requestorName": "Harsh",
+  "role": "OBSERVATIONCURATOR",
+  "ccaName": "saxicola maurus",
+  "ccaId": 3
+}
