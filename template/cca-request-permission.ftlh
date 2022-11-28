@@ -13,10 +13,10 @@
   <p>
     <a href="${serverUrl}/user/show/${requestorId?c}">${requestorName}</a>
     is requesting to be a Contibutor of the following CCA
-    <a href="${serverUrl}/data/show/${ccaId?c}">${ccaName}</a>
   </p>
 
   <#if (summary)??>
+  <a href="${serverUrl}/data/show/${ccaId?c}">
   <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
     <table>
       <tbody>
@@ -71,6 +71,7 @@
       </tbody>
     </table>
   </div>
+</a>
 </#if>
   <a
     href="${serverUrl}/continue/verify-token?token=${encrypted_key}&type=cca-contibutor-request"
