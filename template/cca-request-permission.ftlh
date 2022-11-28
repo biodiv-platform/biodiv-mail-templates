@@ -73,6 +73,9 @@
   </div>
 </a>
 </#if>
+<#if (requestor_message)??>
+<p><b>Requestor message : </b> ${requestor_message}</p>
+</#if>
   <a
     href="${serverUrl}/continue/verify-token?token=${encrypted_key}&type=cca-contibutor-request"
     style="

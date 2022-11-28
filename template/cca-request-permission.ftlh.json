@@ -9,6 +9,7 @@
   "role": "OBSERVATIONCURATOR",
   "ccaName": "saxicola maurus",
   "ccaId": 3,
+  "requestor_message":"Hi this is demo message !",
   "summary": {
     "title" : "Title value",
     "ecosystem" : "Ecosystem value",
