@@ -1,0 +1,21 @@
+{
+  "name": "Administrator",
+  "siteName": "Community Conserved Areas",
+  "serverUrl": "https://communityconservedareas.org",
+  "encrypted_key": "xyz",
+  "requestorId": 815309,
+  "requestorName": "Harsh",
+  "requesteeName": "Harsh",
+  "role": "OBSERVATIONCURATOR",
+  "ccaName": "saxicola maurus",
+  "ccaId": 3,
+  "requestor_message":"Hi this is demo message !",
+  "summary": {
+    "title" : "Title value",
+    "ecosystem" : "Ecosystem value",
+    "area": "Area value",
+    "legalStatus": "Legal status value",
+    "nameOfCCA": "Name of CCA value",
+    "image" : "https://communityconservedareas.org/files-api/api/get/raw/pages/ibpmu-558fA4_4CBDJ1hYCPBJSB/a01a33cddd9e49e2a85f105c79b98403.JPG"
+  }
+}
