@@ -194,6 +194,7 @@
       </div>
     </#if>
     <#if (summary)??>
+    <a href="${serverUrl}/data/show/${data.id?c}">
       <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
         <table>
           <tbody>
@@ -248,6 +249,7 @@
           </tbody>
         </table>
       </div>
+    </a>
     </#if>
     <#if type=="CCA_DATA_UPDATED">
       <div>
