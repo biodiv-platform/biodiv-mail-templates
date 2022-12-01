@@ -7,5 +7,6 @@
   "requestorName": "Harsh",
   "role": "OBSERVATIONCURATOR",
   "taxonName": "saxicola maurus",
-  "taxonId": 1233
+  "taxonId": 1233,
+  "requestor_message":"Hi this is demo message !"
 }
