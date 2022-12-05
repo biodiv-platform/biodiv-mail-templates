@@ -123,7 +123,7 @@
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
       <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
-    </a> featured observation in: <a href="${serverUrl}/group/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
+    </a> featured observation in: <a href="${serverUrl}/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
   </p>
 
 <#elseif type=="FEATURED_POST_IBP">
@@ -180,7 +180,7 @@
     </a>
     <#if submitType=="post">posted<#else>removed </#if> observation
     <#if submitType=="post">to<#else>from </#if> group
-    <a href="${serverUrl}/group/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
+    <a href="${serverUrl}/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
   </p>
 
 <#elseif type=="SUGGEST_MAIL">

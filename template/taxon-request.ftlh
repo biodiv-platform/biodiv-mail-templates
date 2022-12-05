@@ -17,7 +17,9 @@
       <i>${taxonName}</i>
     </a>
   </p>
-
+  <#if (requestor_message)??>
+  <p><b>Requestor message : </b> ${requestor_message}</p>
+  </#if>
   <a
     href="${serverUrl}/continue/verify-request?token=${encrypted_key}&type=taxon-request"
     style="
