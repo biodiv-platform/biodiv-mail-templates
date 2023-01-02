@@ -189,7 +189,7 @@
     <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
       <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
       ${whoPosted.name}
-    </a> suggested species name <span>${recoVote}</span>
+    </a> suggested species name <span>${recoVote}</span> <#if recoSource??><span>&nbsp(via ${recoSource})</span></#if>
   </p>
 
 <#elseif type=="TAGGED_MAIL">
