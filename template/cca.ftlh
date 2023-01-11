@@ -194,12 +194,12 @@
       </div>
     </#if>
     <#if (summary)??>
-    <a href="${serverUrl}/data/show/${data.id?c}">
       <div style="background: #EDF2F7; padding: 0.7rem; border-radius: 0.7rem; margin-bottom: 1rem;">
         <table>
           <tbody>
             <#if (summary.title)??>
-            <caption style="margin-bottom: 1rem;"> ${summary.title}</caption>
+            <caption style="margin-bottom: 1rem;">     <a href="${serverUrl}/data/show/${data.id?c}">
+              ${summary.title} </a></caption>
             </#if>
             <tr>
               <td rowspan="5">
@@ -249,7 +249,6 @@
           </tbody>
         </table>
       </div>
-    </a>
     </#if>
     <#if type=="CCA_DATA_UPDATED">
       <div>
@@ -267,7 +266,7 @@
               />
             </#if>
           </span>
-          <a style="margin-left: 0.5rem;" href="/user/show/${follower.id?c}">${follower.name}</a>
+          <a style="margin-left: 0.5rem;" href=" ${serverUrl}/user/show/${follower.id?c}">${follower.name}</a>
           <i style="padding-left: .5rem; font-style: italic;">${activity.title}</i>
         </div>
         <div style="padding-top: 0.5rem;">
