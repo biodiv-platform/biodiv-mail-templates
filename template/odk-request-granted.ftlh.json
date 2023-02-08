@@ -1,0 +1,11 @@
+{
+  "name": "Arun",
+  "siteName": "The Project ROBUST",
+  "serverUrl": "https://staging.eastafricacoffee.org",
+  "role": "ODKWEBUSER",
+  "projectName": "Test",
+  "projectId": 1233,
+  "email": "arun@robust.com",
+  "password": "test12345",
+  "odkLoginUrl": "https://odk.staging.eastafricacoffee.org/#/login?next=/"
+}
