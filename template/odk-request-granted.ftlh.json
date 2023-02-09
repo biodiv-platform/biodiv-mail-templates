@@ -6,6 +6,5 @@
   "projectName": "Test",
   "projectId": 1233,
   "email": "arun@robust.com",
-  "password": "test12345",
-  "odkLoginUrl": "https://odk.staging.eastafricacoffee.org/#/login?next=/"
+  "password": "test12345"
 }

@@ -48,12 +48,12 @@
     </div>
 
     <p>You can login to your account using this
-      <a href="${odkLoginUrl}">
+      <a href="https://odk.${serverUrl?substring(8)}">
         <i>link.</i>
       </a>
     </p>
     <p>After you login, go to the <b>Dashboard</b> and click on <b>ROBUST ODK</b>.
-      In the pop-up dialog you will see a a link to the ODK Platform.
+      In the pop-up dialog you will see alink to the ODK Platform.
       Click the ODK platform link.
       Give your email and password and login to the ODK Platform.</p>
   </#if>
