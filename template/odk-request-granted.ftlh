@@ -9,7 +9,7 @@
 
   <p>
 
-    <#if role?matches("ODKAPPUSER")>
+    <#if role?matches("ODK_APP_USER")>
       You have been added as
 
       <b> ODK appuser</b> in the Project <b>${projectName}</b>
@@ -25,7 +25,7 @@
   </p>
 
 
-  <#if role?matches("ODKWEBUSER")>
+  <#if role?matches("ODK_WEB_USER")>
 
     <p>You have been added as an <b>ODK Webuser</b> with the</p>
 
@@ -48,9 +48,15 @@
     </div>
 
     <p>You can login to your account using this
-      <a href="https://odk.${serverUrl?substring(8)}">
-        <i>link.</i>
-      </a>
+      <#if serverUrl?contains("staging")>
+        <a href="https://odk.staging.eastafricacoffee.org/#/login?next=/">
+          <i>link.</i>
+        </a>
+        <#else>
+          <a href="https://odk.eastafricacoffee.org/#/login?next=/">
+            <i>link.</i>
+          </a>
+      </#if>
     </p>
     <p>After you login, go to the <b>Dashboard</b> and click on <b>ROBUST ODK</b>.
       In the pop-up dialog you will see alink to the ODK Platform.
