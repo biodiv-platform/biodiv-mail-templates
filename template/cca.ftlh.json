@@ -35,6 +35,7 @@
     "title": "Comment title",
     "description": "comment description"
   },
+  "comment_body":"test",
 
   "summary": {
     "title" : "Title value",
