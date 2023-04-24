@@ -79,7 +79,7 @@
       alt="Naksha"
     />
     <div>
-      <a href="${serverUrl+'/maps'}"> Visualize or download maps </a>
+      <a href="${serverUrl+'/map'}"> Visualize or download maps </a>
       Interact with spatial data on biodiversity through our map layers. The
       layers can be overlaid and queried or downloaded to be used offline.
     </div>
@@ -105,7 +105,7 @@
       alt="Observations"
     />
     <div>
-      <a href="${serverUrl+'/usergroup/list'}"> Join user communities </a>
+      <a href="${serverUrl+'/group/list'}"> Join user communities </a>
       Groups are microsites on various, taxonomic, spatial or organizational
       themes that you may join to interact with and help build information on.
     </div>
