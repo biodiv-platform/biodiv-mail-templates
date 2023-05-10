@@ -15,7 +15,7 @@
           ${whoPosted.name}
         </a> added a comment to the page listed below.
       </p>
-    <#elseif type=="PAGE_COMMENT_DELETE"
+    <#elseif type=="PAGE_COMMENT_DELETE">
       <p>Hi ${follower.name},</p>
       <p>
         <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
