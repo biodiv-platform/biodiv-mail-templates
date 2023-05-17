@@ -20,6 +20,14 @@
         added a comment to the page listed below.
       </#if>
       </p>
+    <#elseif type=="DOCUMENT_COMMENT_DELETE">
+     <p>Hi ${follower.name},</p>
+      <p>
+        <a style="text-decoration: none;" href="${serverUrl}/user/show/${whoPosted.id?c}">
+          <img style="display: inline;border-radius: 4px; vertical-align: middle; height: auto; width: 2rem;" src="${serverUrl}/files-api/api/get/icon/32/32/users${whoPosted.icon}">
+          ${whoPosted.name}
+        </a> deleted a comment to the page listed below.
+      </p>
     <#elseif type=="DOCUMENT_ADDED">
       <p>Hi ${follower.name},</p>
       <p>
@@ -68,7 +76,7 @@
       </p>
     </#if>
 
-    <#if type=="COMMENT_POST" || type=="DOCUMENT_COMMENT_POST" >
+    <#if type=="COMMENT_POST" || type=="DOCUMENT_COMMENT_POST" || type=="DOCUMENT_COMMENT_DELETE">
     <div style="margin-bottom: 1.4rem; padding: 1rem; border-radius: 0.5rem; background: #EDF2F7">${commentBody}</div>
     </#if>
 
