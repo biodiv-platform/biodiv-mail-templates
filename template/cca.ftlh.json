@@ -2,81 +2,84 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://communityconservedareas.org",
   "submitType": "post",
-  "type": "CCA_DATA_COMMENT",
+  "type": "POST_TO_GROUP",
   "user": {
     "id": 2,
     "name": "Administrator",
     "icon": ""
   },
 
-  "data" : {
+  "data": {
     "id": 392709,
     "url": "data_url",
-    "label" : "location summary field",
-    "value" : "true",
-    "time" : "3 hour ago",
+    "label": "location summary field",
+    "value": "true",
+    "time": "3 hour ago",
     "updated_time": "3 hour ago"
   },
 
-  "template" : {
-    "short_name" : "Long",
-    "url" : "template/list",
-    "time" : "3 hour ago",
-    "update_time" : "3 hour ago"
+  "template": {
+    "short_name": "Long",
+    "url": "template/list",
+    "time": "3 hour ago",
+    "update_time": "3 hour ago"
   },
 
-  "activity" : {
-    "description" : "This is a very well known CCA case study.",
-    "title" : "Commented",
-    "time" : "2 hour ago"
+  "activity": {
+    "description": "This is a very well known CCA case study.",
+    "title": "Commented",
+    "time": "2 hour ago"
   },
 
   "comment": {
     "title": "Comment title",
     "description": "comment description"
   },
-  "comment_body":"test",
+  "comment_body": "test",
 
   "summary": {
-    "title" : "Title value",
-    "ecosystem" : "Ecosystem value",
+    "title": "Title value",
+    "ecosystem": "Ecosystem value",
     "area": "Area value",
     "legalStatus": "Legal status value",
     "nameOfCCA": "Name of CCA value",
-    "image" : "https://communityconservedareas.org/files-api/api/get/raw/pages/ibpmu-558fA4_4CBDJ1hYCPBJSB/a01a33cddd9e49e2a85f105c79b98403.JPG"
+    "image": "https://communityconservedareas.org/files-api/api/get/raw/pages/ibpmu-558fA4_4CBDJ1hYCPBJSB/a01a33cddd9e49e2a85f105c79b98403.JPG"
   },
 
-  "permission" : {
-    "name" : "klm",
-    "id" : 2
+  "permission": {
+    "name": "klm",
+    "id": 2
   },
 
   "follower": {
-    "id": 2,
+    "id": 3,
     "name": "Prabhakar Rajgopal",
-    "icon" : "ibpmu-AQgXorQe7ATMExgXTaqxC/631876356e984c25ba873b35d5df96cf.png"
+    "icon": "ibpmu-AQgXorQe7ATMExgXTaqxC/631876356e984c25ba873b35d5df96cf.png"
   },
 
-  "permissions": [
+  "added": {},
+  "where": {
+    "webAddress": "/group/indian-birds",
+    "userGroupName": "Indian Birds"
+  },
+  "whatPosted": {
+    "id": 392709,
+    "icon": "moL94asENMGUTvxlNBhpj/resources/9407d9b994a84e40b265fe07f2fbab2e.png",
+    "name": "Wasp Moth",
+    "location": "Earth",
+    "observedOn": "28-12-2021",
+    "userGroups": [
       {
-        "id": 1,
-        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
-        "name": "Indian Moths"
+        "webAddress": "/group/Seva_Mandir/show",
+        "icon": "/moL94asENMGUTvxlNBhpj/resources/9407d9b994a84e40b265fe07f2fbab2e.png?h=40",
+        "name": "Seva Mandir"
       },
       {
-        "id": 2,
-        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
-        "name": "Indian Moths mm"
-      },
-      {
-        "id": 3,
-        "icon": "/U2OitBS584gHGsDIna7v1/resources/10140.png?h=40",
-        "name": "Indian Moths mm"
+        "webAddress": "/group/DemoGroup/show",
+        "icon": "/k-aM8YulidX5IUyIbeMvR/resources/31f597fc73894e8e86648bb99475ccef.JPG?w=40",
+        "name": "DemoGroup"
       }
-    ],
-
-  "added" : {
-
+    ]
   },
 
   "downloadMail": {
@@ -84,5 +87,5 @@
     "name": "XYZ"
   },
   "unregisterEmailNotification": "xyz",
-  "test" : "2"
+  "test": "2"
 }

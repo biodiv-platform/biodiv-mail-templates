@@ -79,7 +79,7 @@
 
       <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" ||
         type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW" ||
-        type=="CCA_DATA_PERMISSION_REMOVED" || type=="CCA_DATA_DELETED" || type=="TAGGED_MAIL">
+        type=="CCA_DATA_PERMISSION_REMOVED" || type=="CCA_DATA_DELETED" || type=="TAGGED_MAIL" || type=="POST_TO_GROUP">
         <p>
           <#if user.id==follower.id>
             <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
@@ -109,33 +109,14 @@
                 <#elseif type=="TAGGED_MAIL"> has tagged you in a comment for
                   <#elseif type=="CCA_DATA_ADDED"> created
                     <#elseif type=="CCA_DATA_DELETED"> deleted
-                      <#elseif type=="CCA_DATA_PERMISSION">
-                        Added permission for users
-                        <#list permissions as memberOf>
-                          <#if (memberOf.id)??>
-                            <a style="
-                          display: contents;
-                          align-items: center;
-                          border: 2px solid #e2e8f0;
-                          border-radius: 0.375rem;
-                          text-decoration: none;
-                          color: blue;
-                          height: 3rem;
-                          line-height: 3rem;
-                          text-overflow:ellipsis;
-                          overflow:hidden;
-                          white-space:nowrap;
-                          margin-right: 0.75rem;
-                          margin-bottom: 0.75rem;
-                        " href="${serverUrl}/user/show/${memberOf.id}">
-                              ${memberOf.name}<#sep>, </#sep>
-                            </a>
-                          </#if>
-                        </#list>
-                        to contribute to
-                        </a>
-                        <#elseif type=="CCA_DATA_PERMISSION_REMOVED">
-                          Removed permission for users
+                      <#elseif type=="POST_TO_GROUP">
+                        <#if submitType=="post">posted<#else>removed </#if>
+                        <#if submitType=="post">to<#else>from </#if> group
+                        <a href="${serverUrl}/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
+                        for
+
+                        <#elseif type=="CCA_DATA_PERMISSION">
+                          Added permission for users
                           <#list permissions as memberOf>
                             <#if (memberOf.id)??>
                               <a style="
@@ -159,7 +140,32 @@
                           </#list>
                           to contribute to
                           </a>
-                          <#else> updated
+                          <#elseif type=="CCA_DATA_PERMISSION_REMOVED">
+                            Removed permission for users
+                            <#list permissions as memberOf>
+                              <#if (memberOf.id)??>
+                                <a style="
+                          display: contents;
+                          align-items: center;
+                          border: 2px solid #e2e8f0;
+                          border-radius: 0.375rem;
+                          text-decoration: none;
+                          color: blue;
+                          height: 3rem;
+                          line-height: 3rem;
+                          text-overflow:ellipsis;
+                          overflow:hidden;
+                          white-space:nowrap;
+                          margin-right: 0.75rem;
+                          margin-bottom: 0.75rem;
+                        " href="${serverUrl}/user/show/${memberOf.id}">
+                                  ${memberOf.name}<#sep>, </#sep>
+                                </a>
+                              </#if>
+                            </#list>
+                            to contribute to
+                            </a>
+                            <#else> updated
           </#if> the following CCA data.
         </p>
         <#if type=="CCA_DATA_COMMENT" || type="TAGGED_MAIL">
@@ -255,6 +261,55 @@
           </div>
         </#if>
   </#if>
+
+  <#if whatPosted.userGroups?has_content>
+    The above CCA is a member of the following groups:
+  </#if>
+  <table style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0">
+    <#list whatPosted.userGroups?chunk(2) as row>
+
+      <tr>
+        <#list row as memberOf>
+          <#if (memberOf.webAddress)??>
+            <td>
+              <a style="
+                  display: block;
+                  align-items: center;
+                  border: 2px solid #e2e8f0;
+                  border-radius: 0.375rem;
+                  text-decoration: none;
+                  color: inherit;
+                  height: 3rem;
+                  line-height: 3rem;
+                  text-overflow:ellipsis;
+                  overflow:hidden;
+                  white-space:nowrap;
+                  margin-right: 0.75rem;
+                  margin-bottom: 0.75rem;
+                " href="
+                <#if memberOf.webAddress?starts_with(" /group")>
+                ${serverUrl}${memberOf.webAddress}/show
+                <#else>
+                  ${memberOf.webAddress}
+          </#if>
+          " >
+          <#if (memberOf.icon)??>
+            <img src="${serverUrl}/biodiv/userGroups/${memberOf.icon}" style="
+                    float: left;
+                    height: 35px;
+                    width: 35px;
+                    object-fit: contain;
+                    padding: 0.4rem;
+                  " />
+          </#if>
+          ${memberOf.name}
+          </a>
+          </td>
+          </#if>
+        </#list>
+      </tr>
+    </#list>
+  </table>
   <#if type!="CCA_DATA_DELETED" && type!="CCA_TEMPLATE_DELETED">
     <p>
       For more information, please visit the page
