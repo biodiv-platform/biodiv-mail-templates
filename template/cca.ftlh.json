@@ -2,7 +2,7 @@
   "siteName": "Community Conserved Areas",
   "serverUrl": "https://communityconservedareas.org",
   "submitType": "post",
-  "type": "POST_TO_GROUP",
+  "type": "CCA_DATA_POST_TO_GROUP",
   "user": {
     "id": 2,
     "name": "Administrator",

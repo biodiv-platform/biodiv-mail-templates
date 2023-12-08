@@ -79,7 +79,8 @@
 
       <#elseif type=="CCA_DATA_UPDATED" || type=="CCA_DATA_ADDED" || type=="CCA_DATA_COMMENT" ||
         type=="CCA_DATA_PERMISSION" || type=="CCA_DATA_FOLLOW" || type=="CCA_DATA_UNFOLLOW" ||
-        type=="CCA_DATA_PERMISSION_REMOVED" || type=="CCA_DATA_DELETED" || type=="TAGGED_MAIL" || type=="POST_TO_GROUP">
+        type=="CCA_DATA_PERMISSION_REMOVED" || type=="CCA_DATA_DELETED" || type=="TAGGED_MAIL" ||
+        type=="CCA_DATA_POST_TO_GROUP">
         <p>
           <#if user.id==follower.id>
             <a style="text-decoration: none;" href="${serverUrl}/user/show/${user.id?c}">
@@ -109,7 +110,7 @@
                 <#elseif type=="TAGGED_MAIL"> has tagged you in a comment for
                   <#elseif type=="CCA_DATA_ADDED"> created
                     <#elseif type=="CCA_DATA_DELETED"> deleted
-                      <#elseif type=="POST_TO_GROUP">
+                      <#elseif type=="CCA_DATA_POST_TO_GROUP">
                         <#if submitType=="post">posted<#else>removed </#if>
                         <#if submitType=="post">to<#else>from </#if> group
                         <a href="${serverUrl}/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
