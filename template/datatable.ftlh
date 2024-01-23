@@ -50,7 +50,7 @@
         </a>
         <#if submitType=="post">posted<#else>removed </#if> Datatable
         <#if submitType=="post">to<#else>from </#if> group
-        <a href="${serverUrl}/group/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
+        <a href="${serverUrl}/${where.webAddress}/show"><i>${where.userGroupName}</i></a>
       </p>
 
       <#elseif type=="TAGGED_MAIL">
